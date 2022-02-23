@@ -25,8 +25,7 @@ html {
 }
 
 #banner {
-    background: url(/media/bg_main_tiny.png) no-repeat center center;
-    background-size: cover;
+    height:fit-content;
 }
 
 body {
@@ -70,6 +69,8 @@ body {
     border-radius: 15px;
 }
 
+
+
 .btn-black {
     background: black;
     color: white;
@@ -101,6 +102,7 @@ body {
     background: var(--color-primary-dark) !important;
 }
 
+.dark-bg,
 .topnav-bg-color {
    /* background: #66bb6a; */
    background: var(--color-primary);
@@ -224,15 +226,11 @@ hr {
     color: var(--color-text-body) !important;
 }
 
-#section {
-    background-color: var(--color-banner-bg);
-    padding-top: 10px;
-
+.carousel-inner {
+    height: 204px;
 }
 
-.header-container {
-    padding-top: auto;
-}
+
 
 /* -------------------------------- Media Queries */
 
@@ -244,28 +242,26 @@ hr {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 375px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+@media (max-width: 350px) {    
+    .header-container {
+        padding-top: 209.6px;
     }
-    
+}
+
+@media (max-width: 411px) {    
     .header-container {
         padding-top: 180.8px;
     }
+}
 
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+@media (max-width:992px) {    
+    .header-container {
+        padding-top: 116.8px;
     }
-    
+}
+
+
+@media (min-width: 993px) {
     .header-container {
         padding-top: 165.2px;
     }

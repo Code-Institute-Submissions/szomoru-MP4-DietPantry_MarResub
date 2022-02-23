@@ -123,13 +123,12 @@
             <div class="message-container"></div>
         {% endif %}
 
-        {% block page-header %}
-        {% endblock %}
-
-        <!-- <main class="container-fluid content-main"> -->
+        <main class="container-fluid">
+          {% block page-header %}
+          {% endblock %}
           {% block content %}
           {% endblock %}
-        <!-- </main> -->
+        </main>
 
         {% block postloadjs %}
         {% endblock %}
