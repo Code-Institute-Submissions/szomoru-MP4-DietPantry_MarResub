@@ -230,6 +230,31 @@ hr {
     height: 204px;
 }
 
+/* -------------------------------- IMG styling */
+
+.row {
+    align-items: center !important;
+}
+
+
+#mission h1 {
+    color: var(--color-secondary);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.light-bold-text {
+    color: var(--color-secondary) !important;
+    font-size: var(--default-font-size);
+    font-style: italic;
+}
+
+#mission p {
+    color: var(--color-html-bg);
+    font-size: var(--default-font-size);
+}
+
+
 
 
 /* -------------------------------- Media Queries */
