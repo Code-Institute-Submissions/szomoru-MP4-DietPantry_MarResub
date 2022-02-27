@@ -13,8 +13,8 @@
     --color-html-bg: #e1e2e1;
     --color-text-body: #37474f;
     --color-text-logo: #f5f5f6;
-    --default-font-size: 1.5rem;
-    --small-font-size: 1rem;
+    --default-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
   }
 
 
@@ -51,11 +51,13 @@ body {
     padding: 5px;
     border-radius: 50%;
     background-color: #9e9d24;
+    font-size: 2rem;
 }
 
 .nav-font {
     font-family: inherit;
     color: var(--color-text-logo) !important;
+    font-size: var(--default-font-size);
 }
 
 .main-logo-link {
@@ -130,6 +132,7 @@ body {
 
 .dropdown-text {
     color: var(--color-secondary) !important;
+    font-size: var(--small-font-size) !important;
 }
 
 .color-body-text {
@@ -151,7 +154,7 @@ hr {
     transform: translate(-50%, -50%);
 }
 
-.nav-item:hover {
+.nav-link:hover {
     text-decoration: underline;
     text-underline-offset: 0.5rem;
 }
@@ -252,8 +255,21 @@ hr {
 #mission p {
     color: var(--color-html-bg);
     font-size: var(--default-font-size);
+    text-align: center;
 }
 
+
+/* -------------------------------- CARD styling */
+
+.card {
+    background-color: var(--color-primary-light);
+}
+
+.card-body>p {
+    color: var(--color-secondary) !important;
+    font-style: italic;
+    max-height: 2rem;
+}
 
 
 
