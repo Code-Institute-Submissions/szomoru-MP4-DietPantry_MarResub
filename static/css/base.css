@@ -158,8 +158,9 @@ hr {
 }
 
 .nav-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.5rem;
+    /*text-decoration: underline;
+    text-underline-offset: 0.5rem;*/
+    color: var(--color-secondary-light) !important;
 }
 
 .content-main {
