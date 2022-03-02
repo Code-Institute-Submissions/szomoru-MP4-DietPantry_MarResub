@@ -45,6 +45,7 @@ def jls_extract_def():
         'allauth.socialaccount',
         'home',
         'products',
+        'bag',
     ]
 
 

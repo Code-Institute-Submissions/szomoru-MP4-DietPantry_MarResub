@@ -85,7 +85,7 @@
                   </div>
                 </li>
                 <li id="shopping_bag" class="list-inline-item border-radius">
-                  <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                  <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                     <div class="text-center color-secondary">
                         <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                         <p class="my-0">
