@@ -384,7 +384,9 @@ a.category-badge > span.badge:hover {
     border-radius: 50%;
 }
 
-.btt-link {
+.btt-link,
+.remove-item,
+.update-link {
     cursor: pointer;
 }
 
