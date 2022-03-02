@@ -59,7 +59,7 @@ body {
 .nav-font {
     font-family: inherit;
     color: var(--color-text-logo) !important;
-    font-size: var(--default-font-size);
+    font-size: 1rem;
 }
 
 .main-logo-link {
@@ -134,7 +134,7 @@ body {
 
 .dropdown-text {
     color: var(--color-secondary) !important;
-    font-size: var(--small-font-size) !important;
+    font-size: 1rem;
 }
 
 .color-body-text {
@@ -330,6 +330,27 @@ hr {
     transform: scale(1.1);
 }
 
+
+/* -------------------------------- Product Page */
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+.product-font {
+    font-family: inherit;
+    color: var(--color-text-body) !important;
+}
+
+.hr-product {
+    margin-top: 3rem;
+}
 
 /* -------------------------------- Media Queries */
 

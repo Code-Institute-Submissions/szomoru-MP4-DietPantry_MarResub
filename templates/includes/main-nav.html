@@ -26,7 +26,7 @@
                 <hr>
                 <a href="" class="dropdown-text dropdown-item ">By Category</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item">All Products</a>
+                <a href="{% url 'products' %}" class="dropdown-text dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -35,13 +35,13 @@
                 Baking Ingredients
             </a>
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-text dropdown-item">Oils and Fats</a>
+                <a href="{% url 'products' %}?category=oils_and_fats" class="dropdown-text dropdown-item">Oils and Fats</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item">Flours</a>
+                <a href="{% url 'products' %}?category=flours" class="dropdown-text dropdown-item">Flours</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item">Sweeteners</a>
+                <a href="{% url 'products' %}?category=sweeteners" class="dropdown-text dropdown-item">Sweeteners</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item">Bakemixes</a>
+                <a href="{% url 'products' %}?category=bakemixes" class="dropdown-text dropdown-item">Bakemixes</a>
             </div>
         </li>
 
@@ -50,11 +50,11 @@
                 Supplements
             </a>
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-text dropdown-item">Protein Powders</a>
+                <a href="{% url 'products' %}?category=protein_powders" class="dropdown-text dropdown-item">Protein Powders</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item">Snacks</a>
+                <a href="{% url 'products' %}?category=snacks" class="dropdown-text dropdown-item">Snacks</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item">Vitamins</a>
+                <a href="{% url 'products' %}?category=vitamins" class="dropdown-text dropdown-item">Vitamins</a>
             </div>
         </li>
 
