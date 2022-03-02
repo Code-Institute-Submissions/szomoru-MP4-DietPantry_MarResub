@@ -1,10 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="all-diets-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Diets
             </a>
-            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-diets-link">
                 <a href="" class="dropdown-text dropdown-item">KETO</a>
                 <hr>
                 <a href="" class="dropdown-text dropdown-item ">Low Carb</a>
@@ -20,21 +20,21 @@
                 All Products
             </a>
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-text dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-text dropdown-item">By Price</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-text dropdown-item ">By Rating</a>
                 <hr>
-                <a href="" class="dropdown-text dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-text dropdown-item ">By Category</a>
                 <hr>
                 <a href="{% url 'products' %}" class="dropdown-text dropdown-item">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="baking-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Baking Ingredients
             </a>
-            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="baking-link">
                 <a href="{% url 'products' %}?category=oils_and_fats" class="dropdown-text dropdown-item">Oils and Fats</a>
                 <hr>
                 <a href="{% url 'products' %}?category=flours" class="dropdown-text dropdown-item">Flours</a>
@@ -46,10 +46,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="supplements-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Supplements
             </a>
-            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="homeware-link">
+            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="supplements-link">
                 <a href="{% url 'products' %}?category=protein_powders" class="dropdown-text dropdown-item">Protein Powders</a>
                 <hr>
                 <a href="{% url 'products' %}?category=snacks" class="dropdown-text dropdown-item">Snacks</a>
