@@ -369,8 +369,23 @@ a.category-badge > span.badge:hover {
 .sorting-row {
     background-color: var(--color-primary);
     border-radius: 2rem;
+}
 
+/* -------------------------------- Scroll up Arrow */
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: var(--color-secondary-dark);
+    background-color: var(--color-primary-dark);
+    border-radius: 50%;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
