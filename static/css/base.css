@@ -98,6 +98,10 @@ body {
     color: #000 !important;
 }
 
+.text-light-custom {
+    color: var(--color-secondary-light)!important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
@@ -350,6 +354,23 @@ hr {
 
 .hr-product {
     margin-top: 3rem;
+}
+
+
+.category-badge {
+    color: var(--color-primary-dark);
+}
+
+a.category-badge > span.badge:hover {
+    background: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
+}
+
+.sorting-row {
+    background-color: var(--color-primary);
+    border-radius: 2rem;
+
+
 }
 
 /* -------------------------------- Media Queries */
