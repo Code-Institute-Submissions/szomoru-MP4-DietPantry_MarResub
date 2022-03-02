@@ -388,6 +388,23 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* -------------------------------- Shopping Bag */
+
+.btn-outline-shop {
+    background: var(--color-primary)!important;
+    color: var(--color-secondary)!important;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.btn-outline-shop:hover,
+.btn-outline-shop:focus,
+.btn-outline-shop:active {
+    background: var(--color-secondary)!important;
+    color: var(--color-primary)!important;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
