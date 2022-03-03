@@ -46,6 +46,7 @@ def jls_extract_def():
         'home',
         'products',
         'bag',
+        'checkout',
     ]
 
 
