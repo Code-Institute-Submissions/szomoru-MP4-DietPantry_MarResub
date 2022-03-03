@@ -244,7 +244,7 @@ hr {
 /* -------------------------------- IMG styling */
 
 .row {
-    align-items: center !important;
+    align-items: center;
 }
 
 #mission h1 {
@@ -269,15 +269,22 @@ hr {
 /* -------------------------------- CARD styling */
 
 .card {
-    background-color: var(--color-primary-light);
+    background-color: white;
+    text-align: center;
     border: none;
+    color: var(--color-text-body);
 }
 
-.card-body>p {
-    color: var(--color-secondary) !important;
-    font-style: italic;
-    max-height: 2rem;
+.card:focus,
+.card:active,
+.card:hover{
+    transform: scale(1.05);
 }
+
+.card-footer {
+    background-color: var(--color-secondary);
+}
+
 
 /* -------------------------------- Footer Styling */
 
@@ -343,7 +350,7 @@ hr {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: var(--color-banner-bg);
 	z-index: -1;
 }
 
@@ -371,6 +378,11 @@ a.category-badge > span.badge:hover {
     border-radius: 2rem;
 }
 
+.align-start {
+    align-items: start!important;
+}
+
+
 /* -------------------------------- Scroll up Arrow */
 
 .btt-button {
@@ -392,21 +404,22 @@ a.category-badge > span.badge:hover {
 
 /* -------------------------------- Shopping Bag */
 
+.btn-outline-shop-bag,
 .btn-outline-shop {
-    background: var(--color-primary)!important;
-    color: var(--color-secondary)!important;
-    border: none;
+    background: var(--color-text-logo)!important;
+    color: var(--color-primary-dark)!important;
+    border: 1px solid var(--color-primary-dark)!important;
     border-radius: 0.5rem;
-    -webkit-transform: translateY(-2px);
-    -ms-transform: translateY(-2px);
-    transform: translateY(-2px);
 }
 
 .btn-outline-shop:hover,
 .btn-outline-shop:focus,
-.btn-outline-shop:active {
-    background: var(--color-secondary)!important;
-    color: var(--color-primary)!important;
+.btn-outline-shop:active,
+.btn-outline-shop-bag:hover,
+.btn-outline-shop-bag:focus,
+.btn-outline-shop-bag:active {
+    background: var(--color-primary)!important;
+    color: var(--color-secondary)!important;
 }
 
 

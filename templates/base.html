@@ -145,25 +145,25 @@
               <div class="footer-section-left col-lg-4 col-md-4 col-sm-6">
                 <ul>
                   <li>
-                      <a href="#">
-                        <span class="">Diets</span>
-                      </a>
-                  </li>
-                  <li>
                     <a href="{% url 'products' %}">
                       <span class="">All Products</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="{% url 'products' %}?category=oils_and_fats,flours,sweeteners,bakemixes">
                       <span class="">Baking Ingredients</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="{% url 'products' %}?category=protein_powders,snacks,vitamins">
                       <span class="">Supplements</span>
                     </a>
                   </li>
+                  <li>
+                    <a href="#">
+                      <span class="">Diet Library</span>
+                    </a>
+                </li>
                 </ul>
               </div>
             

@@ -1,21 +1,6 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="all-diets-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Diets
-            </a>
-            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-diets-link">
-                <a href="" class="dropdown-text dropdown-item">KETO</a>
-                <hr>
-                <a href="" class="dropdown-text dropdown-item ">Low Carb</a>
-                <hr>
-                <a href="" class="dropdown-text dropdown-item ">High Protein</a>
-                <hr>
-                <a href="" class="dropdown-text dropdown-item">Mediterranean</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
             <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
@@ -59,6 +44,20 @@
                 <a href="{% url 'products' %}?category=protein_powders,snacks,vitamins" class="dropdown-text dropdown-item">All Supplements</a>
             </div>
         </li>
-
+        
+        <li class="nav-item dropdown">
+            <a class="nav-font font-weight-bold nav-link color-secondary-dark mr-5" href="#" id="all-diets-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Diet Library
+            </a>
+            <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-diets-link">
+                <a href="" class="dropdown-text dropdown-item">KETO</a>
+                <hr>
+                <a href="" class="dropdown-text dropdown-item ">Low Carb</a>
+                <hr>
+                <a href="" class="dropdown-text dropdown-item ">High Protein</a>
+                <hr>
+                <a href="" class="dropdown-text dropdown-item">Mediterranean</a>
+            </div>
+        </li>
     </ul>
 </div>
