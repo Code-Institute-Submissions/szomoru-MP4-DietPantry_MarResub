@@ -282,7 +282,12 @@ hr {
 }
 
 .card-footer {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary-light);
+}
+
+.card-footer a,
+.card-footer p {
+    color: var(--color-secondary)!important;
 }
 
 
