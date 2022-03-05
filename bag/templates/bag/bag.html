@@ -179,6 +179,11 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
     {% include 'products/includes/quantity_input_script.html' %}
 
     <script type="text/javascript">
@@ -192,14 +197,15 @@
         $('.remove-item').click(function(e) {
             var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('remove_')[1];
+            var size = $(this).data('product_size');
             var url = `/bag/remove/${itemId}/`;
-            var data = {'csrfmiddlewaretoken': csrfToken};
-    
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+
             $.post(url, data)
-             .done(function() {
-                 location.reload();
-             });
-        })
-    </script>
+            .done(function() {
+                location.reload();
+            });
+    })
+</script>
 
 {% endblock %}

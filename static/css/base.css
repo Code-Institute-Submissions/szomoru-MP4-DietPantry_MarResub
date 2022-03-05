@@ -405,6 +405,7 @@ a.category-badge > span.badge:hover {
 .remove-item,
 .update-link {
     cursor: pointer;
+    color: var(--color-secondary-dark);
 }
 
 /* -------------------------------- Shopping Bag */
@@ -444,6 +445,28 @@ a.category-badge > span.badge:hover {
 .toast-capper {
     height: 2px;
 }
+
+.bag-content-text {
+    font-size: var(--small-font-size);
+}
+
+.toast-body-success-bg {
+    background-color: #d7ffd9;
+}
+
+.toast-body-error-bg {
+    background-color: #ffcdd2;
+}
+
+.toast-body-info-bg {
+    background-color: #b3e5fc;
+}
+
+.toast-body-warning-bg {
+    background-color: #ffe0b2;
+}
+
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
