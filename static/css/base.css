@@ -450,20 +450,8 @@ a.category-badge > span.badge:hover {
     font-size: var(--small-font-size);
 }
 
-.toast-body-success-bg {
-    background-color: #d7ffd9;
-}
-
-.toast-body-error-bg {
-    background-color: #ffcdd2;
-}
-
-.toast-body-info-bg {
-    background-color: #b3e5fc;
-}
-
-.toast-body-warning-bg {
-    background-color: #ffe0b2;
+.toast-body-bg {
+    background-color: var(--color-primary-light);
 }
 
 
@@ -517,7 +505,31 @@ a.category-badge > span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+    color: var(--color-text-logo);
 }
+
+.delivery-text {
+    border-radius: 0.5rem;
+}
+
+
+
+#diet-description {
+    min-height: fit-content;
+}
+
+.diet-card {
+    border: 1px solid var(--color-secondary);
+    border-radius: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-secondary-dark);
+    margin: 10px;
+}
+
+.diet-card>h4 {
+    color: var(--color-secondary-dark)!important;
+}
+
 
 /* -------------------------------- Media Queries */
 
