@@ -436,6 +436,7 @@ a.category-badge > span.badge:hover {
     top: 72px;
     right: 15px;
     z-index: 999999999999;
+    color: var(--color-text-logo);
 }
 
 .custom-toast {
@@ -452,6 +453,11 @@ a.category-badge > span.badge:hover {
 
 .toast-body-bg {
     background-color: var(--color-primary-light);
+    color: var(--color-text-logo);
+}
+
+.toast-header-text {
+    color: var(--color-text-logo);
 }
 
 
@@ -502,10 +508,12 @@ a.category-badge > span.badge:hover {
 }
 
 .bag-notification-wrapper {
-    height: 100px;
+    height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
-    color: var(--color-text-logo);
+    border: 2px solid var(--color-text-logo);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .delivery-text {
