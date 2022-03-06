@@ -55,8 +55,9 @@
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-secondary-dark);
+    border-radius: 5px;
 }
 
 select,
