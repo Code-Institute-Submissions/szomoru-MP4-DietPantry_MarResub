@@ -47,6 +47,7 @@ def jls_extract_def():
         'products',
         'bag',
         'checkout',
+        'profiles',
 
         #Other
         'crispy_forms',
