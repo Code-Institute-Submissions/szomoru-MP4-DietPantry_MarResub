@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page-header %}
+    <div id="dp-section-header" class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+
+    <!-- SHOPPING BAG PAGE TITLE -->
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">   
+                <hr class="mt-4">
+                    <h1 class="product-font text-uppercase">Product Management</h1>
+                    <h5>Edit a Product</h5>
+                <hr class="mb-4">   
+            </div>   
+        </div>
+      
+        <div class="row mb-5 align-start justify-content-center">
+             <div class="col-12 col-md-6">
+                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                     {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="text-right">
+                        <a href="{% url 'products' %}" class="btn btn-outline-shop my-3 mx-1">Cancel</a>
+                        <button class="btn btn-outline-shop my-3 mx-1" type="submit">Update Product</button>
+                    </div>
+                 </form>
+             </div>
+        </div>
+    </div>
+    
+    
+{% endblock %}
