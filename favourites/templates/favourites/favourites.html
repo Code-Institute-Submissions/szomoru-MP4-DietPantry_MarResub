@@ -38,11 +38,17 @@
                                     <div class="card-body pb-0">
                                         <hr class="hr-card-body">
                                         <p class="mb-0">{{ product.name }}</p>
-                                        {% if request.user.is_superuser %}
-                                            <div class="row justify-content-center p-1">
-                                                <a class="btn-sm btn-info m-1" href="{% url 'edit_product' product.id %}">Edit</a>
-                                                <a class="btn-sm btn-danger m-1" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </div>
+                                        {% if request.user.is_authenticated %}
+                                            {% if request.user.is_superuser %}
+                                                <div class="row justify-content-center p-1">
+                                                    <a class="btn-sm btn-info m-1" href="{% url 'edit_product' product.id %}">Edit</a>
+                                                    <a class="btn-sm btn-danger m-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </div>
+                                            {% endif %}
+                                                <div class="row justify-content-center p-1">
+                                                    <a class="btn-sm btn-warning m-1" href="{% url 'product_detail' product.id %}">Details</a>
+                                                    <a class="btn-sm btn-danger m-1" href="{% url 'remove_from_favourites' product.id %}">Remove from Favourites</a>
+                                                </div>
                                         {% endif %}
                                         <hr class="hr-card-body mb-3">
                                     </div>
@@ -63,42 +69,25 @@
                                 </div>
                                 <hr class="w-75 mt-3 mb-3">
                             </div>
+                            {% empty %}
+                            <div class="col-12">
+                                <div class="row justify-content-center">
+                                    <!-- If the favourite list is Empty -->
+                                    <div class="text-center mt-3">
+                                        <h3 class="font-weight-bold text-uppercase">You still do not have anyfavourite Product(s)!</h3>
+                                        <a class="btn btn-outline-shop btn-lg mt-5" href="{% url 'products' %}">
+                                            <span class="icon">
+                                                <i class="text-info fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase font-weight-bold text-info">Keep Shopping</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         {% endfor %}
                     </div>
                 </div>
         </div>
     </div>
     
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
-
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
-
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
-
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
-
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
 {% endblock %}

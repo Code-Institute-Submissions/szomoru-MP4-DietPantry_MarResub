@@ -368,6 +368,10 @@ hr {
     margin-top: 3rem;
 }
 
+.product-container {
+    min-height: 65vh;
+}
+
 
 .category-badge {
     color: var(--color-primary-dark);
