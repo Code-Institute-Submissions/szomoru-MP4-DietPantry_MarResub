@@ -1,0 +1,29 @@
+Dear {{ order.full_name }},
+
+Thank You for Your Order!
+
+This e-mail has been sent as a confirmation for your order from Diet Pantry website.
+
+Detailed order information:
+
+Order Number: {{ order.order_number }}
+Date of Order: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Delivery Cost: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to the following shipping adress:
+
+Address: {{ order.street_address1 }}
+City/town: {{ order.town_or_city }}
+Country: {{ order.country }}
+
+In cas eof any delivery problem our colleague will contact ypu on the following phone number:
+{{ order.phone_number }}
+
+If you have any question, do not hasitate to contact us at {{ contact_email }}
+
+Yours Sincerely,
+
+The Diet Pantry Team
