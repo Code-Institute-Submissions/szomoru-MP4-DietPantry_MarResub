@@ -94,14 +94,22 @@
                                         </div>
             
                                         <div class="col-12">
-                                            <a href="{% url 'products' %}" class="btn btn-outline-shop">
-                                                <span class="icon">
-                                                    <i class="fas fa-chevron-left"></i>
-                                                </span>
-                                                <span class="text-uppercase">Keep Shopping</span>
-                                            </a>
                                             
-                                                <input type="submit" class="btn btn-outline-shop-bag text-uppercase" value="Add to Bag">
+                                                <a href="{% url 'products' %}" class="btn btn-outline-shop">
+                                                    <span class="icon">
+                                                        <i class="fas fa-chevron-left"></i>
+                                                    </span>
+                                                    <span class="text-uppercase">Keep Shopping</span>
+                                                </a>
+                                                
+                                                    <input type="submit" class="btn btn-outline-shop-bag text-uppercase" value="Add to Bag">
+                                            
+                                            {% if request.user.is_superuser %}
+                                                <div class="row justify-content-start p-3">
+                                                    <a class="btn btn-info m-1" href="{% url 'edit_product' product.id %}">Edit</a>
+                                                    <a class="btn btn-danger m-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </div>
+                                            {% endif %}
                                             
                                         </div>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
