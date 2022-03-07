@@ -1,7 +1,7 @@
 from django.http import HttpResponse
-from djnago.core.mail import send_mail
+from django.core.mail import send_mail
 from django.template.loader import render_to_string
-from django.coonf import settings
+from django.conf import settings
 
 from .models import Order, OrderLineItem
 from products.models import Product
