@@ -33,8 +33,7 @@ ALLOWED_HOSTS = ['mp4-diet-pantry.herokuapp.com', 'localhost']
 
 # Application definition
 
-def jls_extract_def():
-    return [
+INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
@@ -57,8 +56,6 @@ def jls_extract_def():
         'storages',
     ]
 
-
-INSTALLED_APPS = jls_extract_def()
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
