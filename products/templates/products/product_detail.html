@@ -107,12 +107,15 @@
                                             {% if request.user.is_authenticated %}       
                                                 {% if request.user.is_superuser %}
                                                     <div class="row justify-content-start p-3">
-                                                        <a class="btn btn-warning m-1" href="{% url 'edit_product' product.id %}">Edit</a>
-                                                        <a class="btn btn-danger m-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                        <a class="btn-sm btn-warning m-1 text-center" href="{% url 'edit_product' product.id %}">
+                                                            <i class="m-1 fas fa-edit"></i><br>Edit</a>
+                                                        <a class="btn-sm btn-danger m-1 text-center" href="{% url 'delete_product' product.id %}">
+                                                            <i class="m-1 fas fa-trash-alt"></i><br>Delete</a>
                                                     </div>
                                                 {% endif %}
                                                 <div class="row justify-content-start p-3">
-                                                    <a class="btn btn-info m-1" href="{% url 'add_to_favourites' product.id %}">Add to Favourites</a>
+                                                    <a class="btn-sm btn-info m-1 text-center" href="{% url 'add_to_favourites' product.id %}">
+                                                        <i class="m-1 fas fa-thumbs-up"></i><br>Add to Favourites</a>
                                                 </div>
                                             {% endif %}
                                             
