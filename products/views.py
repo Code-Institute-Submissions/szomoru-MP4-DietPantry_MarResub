@@ -177,12 +177,12 @@ def add_review(request, product_id):
 
 
 @login_required
-def edit_review(request, product_id):
+def edit_review(request, review_id):
     """
     This model allows the user to edit its own review
     """
 
-    review = get_object_or_404(ProductReview, pk=review_id):
+    review = get_object_or_404(ProductReview, pk=review_id)
     product = review.product
 
     if request.method == 'POST':
