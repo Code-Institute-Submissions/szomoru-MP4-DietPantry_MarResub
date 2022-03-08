@@ -594,6 +594,11 @@ a.category-badge > span.badge:hover {
 }
 
 
+/* --------------------------------   Review Form */
+
+textarea.form-control {
+    height: 5rem;
+}
 
 /* fixed top navbar only on medium and up */
 @media (max-width: 575px) {    

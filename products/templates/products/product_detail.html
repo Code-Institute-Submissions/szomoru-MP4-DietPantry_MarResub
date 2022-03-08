@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page-header %}
     <div id="dp-section-header" class="container header-container">
         <div class="row">
@@ -131,21 +132,16 @@
 
             <!-- PRODUCT REVIEW SECTION -->
 
-            <!-- USER OWN REVIEW -->
-            <div class="row container-fluid justify-content-center mt-5 align-start">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <h2>We want to hear <strong>YOUR</strong> opinion about the Product</h2>
+            <form id="review" method="POST" action="{% url 'add_review' product.id %}#review">
+                {% csrf_token %}
+                {{ form.as_input }}
+                <div class="text-right">
+                    <button class="btn btn-info font-weight-bold" type="submit">Submit Review</button>
                 </div>
-            </div>
+            </form>
 
-            <!-- OTHER USERS REVIEW -->
-            <div class="row container-fluid justify-content-center mt-5 align-start">
-                <div class="col-sm-12 col-md-4 col-lg-3">
-
-                </div>
-
-            </div>
         </div>
+    </div>
     
 {% endblock %}
 

@@ -31,32 +31,16 @@ class Product(models.Model):
 
 class ProductReview(models.Model):
     """
-    Product Review Model Section
+    Product review model
     """
 
     class Meta:
-        ordering = ['-date_added']
+        ordering = ['-date_added']    
 
-    rating_selection = (
-        (5, '5'),
-        (4, '4'),
-        (3, '3'),
-        (2, '2'),
-        (1, '1'),
-    )
-
-    product = models.ForeignKey(Product,
-                                related_name='reviews',
-                                null=True,
-                                blank=True,
-                                on_delete=models.SET_NULL)
-    user = models.ForeignKey(User,
-                             null=True,
-                             blank=True,
-                             on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='review', null=True, blank=True, on_delete=models.SET_NULL)
+    user = models.ForeignKey(Product, null=True, blank=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=254)
     content = models.TextField()
-    rating = models.IntegerField(choices=rating_selection, default=3)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
