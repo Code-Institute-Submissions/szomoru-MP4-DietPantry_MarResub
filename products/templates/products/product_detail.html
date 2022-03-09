@@ -126,20 +126,8 @@
                                 </form>
                             </div>
                         </div> 
-                    
                 </div>
             </div>
-
-            <!-- PRODUCT REVIEW SECTION -->
-
-            <form id="review" method="POST" action="{% url 'add_review' product.id %}#review">
-                {% csrf_token %}
-                {{ form.as_input }}
-                <div class="text-right">
-                    <button class="btn btn-info font-weight-bold" type="submit">Submit Review</button>
-                </div>
-            </form>
-
         </div>
     </div>
     
