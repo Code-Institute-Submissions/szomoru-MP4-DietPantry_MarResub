@@ -9,10 +9,11 @@ class Favourite(models.Model):
     Model to show the items on the user favourites list
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    products = models.ManyToManyField(Product, 
-                                    through="FavouriteItem", 
+    products = models.ManyToManyField(Product,
+                                    through="FavouriteItem",
                                     related_name='product_favourites')
-    
+
+
     def __str__(self):
         return f'Favourite({self.user})'
 

@@ -8,15 +8,18 @@ def index(request):
 
     return render(request, 'home/index.html')
 
+
 def keto(request):
     """ this view returns to the keto page """
 
     return render(request, 'home/keto.html')
 
+
 def lowcarb(request):
     """ this view returns to the Low carb page """
 
     return render(request, 'home/lowcarb.html')
+
 
 def highprotein(request):
     """ this view returns to the keto page """
