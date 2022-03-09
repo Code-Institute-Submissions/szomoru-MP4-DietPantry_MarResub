@@ -1,108 +1,167 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **The Diet Pantry **
 
-Welcome szomoru,
+Welcome to My 4th milestone project at Code Institute. The Diet Pantry website is more or less the end of a long long and hard journey in the world of Coding. The purpose of this project 
+to use build a full-stack site around a business logic. I have applied everything what i have learned at Code Institute. The technologies i have used for this project are: HTML, CSS, JAvaScript, Python and Django. Stripe handles online test payments and Heroku Postgres as a relational database.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This website is a fictional webshop for people who are following different type of diets. Sometimes it is really hard to find the right and trustable products for the different diets, so this website supposed to collect the tested and trusted dietary products. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Live site](http://mp4-diet-pantry.herokuapp.com)
+[Github link] (https://github.com/szomoru/MP4-DietPantry) 
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
 
-`python3 -m http.server`
+[User Experience (UX)](#UX)
 
-A blue button should appear to click: _Make Public_,
+[Features](#features)
 
-Another blue button should appear to click: _Open Browser_.
+[Technologies Used](#technologies)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[JavaScripts](#scripts)
 
-A blue button should appear to click: _Make Public_,
+[Testing](#testing)
 
-Another blue button should appear to click: _Open Browser_.
+[Deployment](#deployment)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Credits](#credits)
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<a name="deployment"></a>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## **Deployment**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Requirements for Deployment
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* Python
+* GitHub account
+* Heroku account
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### Initial Deployment
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Heroku Deployment**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+1. Log into Heroku
+2. Create a new app, choose a location closest to you
+3. Search for Heroku Postgres from the resources tab and add to your project
+4. Make sure to have `dj_database_url` and `psycopg2` installed.
+```
+pip3 install dj_database_url
+pip3 install psycopg2
+```
+5. Login to the Heroku CLI - `heroku login -i`
+6. Run migrations on Heroku Postgres - `heroku run python manage.py migrate`
+7. Create a superuser - `python manage.py createsuperuser`
+8. Install `gunicorn` - `pip3 install gunicorn`
+9. Create a requirements.txt file - `pip3 freeze > requirements.txt`
+10. Create a `Procfile` (note the capital P), and add the following,
+```
+web: gunicorn moose_juice.wsgi:application
+```
+11. Disable Heroku from collecting static files - `heroku config:set DISABLE_COLLECTSTATIC=1 --app <your-app-name>`
+12. Add the hostname to project settings.py file
+```
+ALLOWED_HOSTS = ['<you-app-name>.herokuapp.com', 'localhost']
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+13. Connect Heroku to you Github, by selecting Github as the deployment method and search for the github repository and pressing `connect`
+14. In Heroku, within settings, under config vars select `Reveal config vars`
+15. Add the following, 
 ```
+AWS_ACCESS_KEY_ID =	<your variable here>
+AWS_SECRET_ACCESS_KEY =	<your variable here>
+DATABASE_URL =	<added by Heroku when Postgres installed>
+DISABLE_COLLECTSTATIC =	1 
+EMAIL_HOST_PASS = <your variable here>
+EMAIL_HOST_USER = <your variable here>
+SECRET_KEY = <your variable here>
+STRIPE_PUBLIC_KEY = <your variable here>
+STRIPE_SECRET_KEY = <your variable here>
+STRIPE_WH_SECRET = <different from env.py>
+USE_AWS = True
+```
+16. Go back to the Deploy tab and under Automatic deploys choose `Enable Automatic Deploys`
+17. Back in your CLI add, commit and push your changes and Heroku will automatically deploy your app
+```
+git add .
+git commit -m "Initial commit"
+git push
+```
+18. Your deployed site can be launched by clicking `Open App` from its page within Heroku.
 
-**Anything more?**
+### How to Fork it
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+1. Login or Sign Up to [GitHub](www.github.com).
+2. On GitHub, go to [szomoru/extrahand-mp3](https://github.com/szomoru/extrahand-mp3).
+3. In the top right, click "Fork".
+4. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
+5. You will also need to install all of the project requirements. This can be done using the command:
+    * `pip3 install -r requirements.txt`
+6. Type `python3 app.py` in your GitPod terminal to run your local site of this project.
 
----
+### Making a Local Clone
 
-Happy coding!
+1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/szomoru/extrahand-mp3) for this site.
+2. Under the repository name, above the list of files, click "Code".
+3. Here you can either Clone or Download the repository.
+4. You should clone the repository using HTTPS, clicking on the icon to copy the link.
+5. Open Git Bash.
+6. Change the current working directory to the new location, where you want the cloned directory to be.
+7. Type `git clone`, and then paste the URL that was copied in Step 4.
+    * `git clone https://github.com/szomoru/extrahand-mp3.git`
+8. Press Enter, and your local clone will be created.
+9. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
+10. You will also need to install all of the project requirements. This can be done using the command:
+    * `pip3 install -r requirements.txt`.
+11. Type `python3 app.py` in your Gitpod terminal to run your local site of this project.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/szomoru/extrahand-mp3)
+
+
+<a name="credits"></a>
+
+## Credits
+
+### Code
+
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+
+-   [W3Schools](https://www.w3schools.com/): I have used their content many times to understand CSS and HTML, JavaScript and learned a lot from their content
+
+-   [Froggy](https://flexboxfroggy.com/): I have used this cute educator site to understand better the flexbox method
+
+-   [CSS tricks](https://css-tricks.com/): I have also learned a lot and found interesting topics on the CSS-tricks website
+
+-   [Stackoverflow community](https://stackoverflow.com/): I have read a lot of forums and got a lot of hints how to continue when i was stucked.
+
+### Content
+
+-   All content was written by the developer -Gergely Vig. 
+- I have used the following documents as a support and inspiration for the README.md file:
+    - Code Institute [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
+    - Code Institute [README Template](https://github.com/Code-Institute-Solutions/readme-template)
+    - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
+    - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+    - [Gergely Vig](https://github.com/szomoru/MP1-Bodyweight)
+   
+    
+
+### Media
+
+- 
+    
+
+### Acknowledgements
+
+-   My Mentor for helpful feedback.
+-   Thanks to my family specially my wife who taken over our 4 kids while i was doing my studies. 
