@@ -3,9 +3,9 @@
     --color-primary: #37474f;
     --color-primary-light: #62727b; 
     --color-primary-dark: #102027;
-    --color-secondary: #ffca28;
-    --color-secondary-light: #fffd61;
-    --color-secondary-dark: #c79a00;
+    --color-secondary: #f5f5f6;
+    --color-secondary-light: #ffffff;
+    --color-secondary-dark: #c2c2c3;
     --color-black: #000; /* black */
     --color-white: #fff; /* white */
     --color-red: #dc3545; /* Red */
@@ -13,10 +13,10 @@
     --color-html-bg: #e1e2e1;
     --color-text-body: #37474f;
     --color-text-logo: #f5f5f6;
-    --default-font-size: 1.6rem;
+    --default-font-size: 1rem;
     --default-footer-font-size: 1rem;
-    --default-copyrigth-size: 0.8rem;
-    --small-font-size: 1.4rem;
+    --default-copyrigth-size: 0.75rem;
+    --small-font-size: 1rem;
   }
 
 
