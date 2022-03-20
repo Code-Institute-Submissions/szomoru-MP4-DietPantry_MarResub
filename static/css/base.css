@@ -39,6 +39,7 @@ body {
 
 .error-font {
     font-family: 'Lato', sans-serif;
+    color: var(--color-secondary-light);
 }
 
 /* from Bulma */
