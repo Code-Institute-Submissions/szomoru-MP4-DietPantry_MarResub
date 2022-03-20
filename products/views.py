@@ -137,36 +137,73 @@ def delete_product(request, product_id):
     """
     Delete Product
     """
+
     if not request.user.is_superuser:
-        messages.error(request, 'Only store owners or Admins can perform this command!')
+        messages.error(request, 'Only store owners or Admins can Delete Products from the database!')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Product Deleted!')
+    messages.success(request, 'Product Succesfully Deleted!')
     return redirect(reverse('products'))
 
 
 # Add and Edit review section is mainly based on the Boutique ado project Add and Edit product models
 
-#@login_required
-#def add_review(request, product_id):
+@login_required
+def add_review(request, product_id):
     """
     Product managemenet - adding product review to the webstore
     """    
 
-#    if request.user.is_authenticated:
-#        if request.method == 'POST':
-#            form = ReviewForm(request.POST)
-#            if form.is_valid():
-#                review = form.save()
-#                messages.success(request, 'Product Review Successfully Added!')
-#                return redirect(reverse('product_detail', args=[product_id]))
-#            else:
-#                messages.error(request, 'Something went wrong! Your product review has not been added!')
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.save()
+                messages.success(request, 'Product Review Successfully Added!')
+                return redirect(reverse('product_detail', args=[product_id]))
+            else:
+                messages.error(request, 'Something went wrong! Your product review has not been added!')
 
-#    context = {
-#        'form': form,
-#    }
+    context = {
+        'form': form,
+    }
 
-#    return render(request, context)
+    return render(request, context)
+
+
+@login_required
+def edit_review(request, review_id):
+    """
+    Edit review
+    """
+
+    product = get_object_or_404(ProductReview, pk=review_id)
+    product = review.product
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product Review Succesfully Updated!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Your update has not gone through ... Please, return back later and try it agin.')
+    else:
+        form = ReviewForm(instance=product)
+
+        messages.info(request, f'You are editing your previous review')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+        'edit': True,
+        'review': review, 
+    }
+
+    return render(request, template, context)
