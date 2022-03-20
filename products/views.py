@@ -65,9 +65,11 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
 
     context = {
         'product': product,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -143,7 +145,11 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
+    # Gets all the revies of the product
+    reviews = product.reviews.all()
     product.delete()
+    # delete all the connected reviews to the product
+    reviews.delete()
     messages.success(request, 'Product Succesfully Deleted!')
     return redirect(reverse('products'))
 
@@ -154,7 +160,9 @@ def delete_product(request, product_id):
 def add_review(request, product_id):
     """
     Product managemenet - adding product review to the webstore
-    """    
+    """
+
+    product = get_object_or_404(ProductReview, pk=product_id)
 
     if request.user.is_authenticated:
         if request.method == 'POST':
@@ -165,7 +173,7 @@ def add_review(request, product_id):
                 review.user = request.user
                 review.save()
                 messages.success(request, 'Product Review Successfully Added!')
-                return redirect(reverse('product_detail', args=[product_id]))
+                return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Something went wrong! Your product review has not been added!')
 
@@ -182,7 +190,7 @@ def edit_review(request, review_id):
     Edit review
     """
 
-    product = get_object_or_404(ProductReview, pk=review_id)
+    review = get_object_or_404(ProductReview, pk=review_id)
     product = review.product
 
     if request.method == 'POST':
@@ -194,16 +202,16 @@ def edit_review(request, review_id):
         else:
             messages.error(request, 'Your update has not gone through ... Please, return back later and try it agin.')
     else:
-        form = ReviewForm(instance=product)
+        form = ReviewForm(instance=review)
 
         messages.info(request, f'You are editing your previous review')
 
-    template = 'products/edit_product.html'
+    template = 'products/product_detail.html'
     context = {
         'form': form,
         'product': product,
         'edit': True,
-        'review': review, 
+        'review': review,
     }
 
     return render(request, template, context)
