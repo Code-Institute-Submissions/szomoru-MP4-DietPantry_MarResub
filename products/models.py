@@ -38,16 +38,16 @@ class ProductReview(models.Model):
         ordering = ['-date_added']  
 
     rating_selector = (
-        (3, 'Oh yesss...'),
-        (2, 'So so...'),
-        (1, 'Not at all...'),
+        (3, '3'),
+        (2, '2'),
+        (1, '1'),
     )
 
     product = models.ForeignKey(Product, related_name='review', null=True, blank=True, on_delete=models.SET_NULL)
-    user = models.ForeignKey(Product, null=True, blank=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
     title = models.CharField(max_length=254)
     content = models.TextField()
-    rating = models.IntegerField(rating_selector, default=3)
+    rating = models.IntegerField(choices=rating_selector, default=3)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
