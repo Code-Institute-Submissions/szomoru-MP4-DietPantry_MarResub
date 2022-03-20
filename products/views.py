@@ -149,24 +149,24 @@ def delete_product(request, product_id):
 
 # Add and Edit review section is mainly based on the Boutique ado project Add and Edit product models
 
-@login_required
-def add_review(request, product_id):
+#@login_required
+#def add_review(request, product_id):
     """
     Product managemenet - adding product review to the webstore
     """    
 
-    if request.user.is_authenticated:
-        if request.method == 'POST':
-            form = ReviewForm(request.POST)
-            if form.is_valid():
-                review = form.save()
-                messages.success(request, 'Product Review Successfully Added!')
-                return redirect(reverse('product_detail', args=[product_id]))
-            else:
-                messages.error(request, 'Something went wrong! Your product review has not been added!')
+#    if request.user.is_authenticated:
+#        if request.method == 'POST':
+#            form = ReviewForm(request.POST)
+#            if form.is_valid():
+#                review = form.save()
+#                messages.success(request, 'Product Review Successfully Added!')
+#                return redirect(reverse('product_detail', args=[product_id]))
+#            else:
+#                messages.error(request, 'Something went wrong! Your product review has not been added!')
 
-    context = {
-        'form': form,
-    }
+#    context = {
+#        'form': form,
+#    }
 
-    return render(request, context)
+#    return render(request, context)
