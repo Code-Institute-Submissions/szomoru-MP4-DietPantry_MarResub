@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block page_header %}
-	<div class="container header-container">
-		<div class="row">
-			<div class="col"></div>
-		</div>
-	</div>
+{% block page-header %}
+    <div id="dp-section-header" class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
     <div class="container-fluid large-container">
         <div class="row">
             <div class="col text-center mt-3">
-                <h1 class="hero-font text-uppercase">Ooops! I am a 500 Error page. It seems something went wrong. Click on the button below to get home and hope do not meet again ...</h1>
+                <h1 class="error-font text-uppercase">Ooops! I am a 500 Error page. It seems something went wrong. Click on the button below to get home and hope do not meet again ...</h1>
                 <hr class="w-50 mb-5">
-                <a class="btn btn-light btn-lg  mt-5" href="{% url 'home' %}">
+                <a class="btn btn-info btn-lg  mt-5" href="{% url 'home' %}">
                     <span class="icon">
                         <i class="text-info fas fa-chevron-left"></i>
                     </span>
