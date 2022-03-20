@@ -33,8 +33,12 @@ html {
 body {
     height: calc(100vh - 164px);
     color: var(--color-text-body);
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     background-color: var(--color-banner-bg);
+}
+
+.error-font {
+    font-family: 'Lato', sans-serif;
 }
 
 /* from Bulma */
@@ -54,7 +58,7 @@ body {
     border-radius: 50%;
     background-color: #9e9d24;
     font-size: 2rem;
-}
+}k
 
 .nav-font {
     font-family: inherit;
@@ -638,7 +642,6 @@ textarea.form-control {
         padding-top: 116.8px;
     }
 }
-
 
 @media (min-width: 993px) {
     .header-container {
