@@ -1,59 +1,57 @@
-[
-    {
-      "pk": 1,
-      "model": "products.category",
-      "fields": {
-        "name": "oils_and_fats",
-        "friendly_name": "Oils and Fats"
-      }
-    },
-    {
-      "pk": 2,
-      "model": "products.category",
-      "fields": {
-        "name": "flours",
-        "friendly_name": "Flours"
-      }
-    },
-    {
-      "pk": 3,
-      "model": "products.category",
-      "fields": {
-        "name": "sweeteners",
-        "friendly_name": "Sweeteners"
-      }
-    },
-    {
-      "pk": 4,
-      "model": "products.category",
-      "fields": {
-        "name": "bakemixes",
-        "friendly_name": "Bakemixes"
-      }
-    },
-    {
-      "pk": 5,
-      "model": "products.category",
-      "fields": {
-        "name": "protein_powders",
-        "friendly_name": "Protein Powders"
-      }
-    },
-    {
-      "pk": 6,
-      "model": "products.category",
-      "fields": {
-        "name": "snacks",
-        "friendly_name": "Snacks"
-      }
-    },
-    {
-      "pk": 7,
-      "model": "products.category",
-      "fields": {
-        "name": "vitamins",
-        "friendly_name": "Vitamins"
-      }
+[{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "oils_and_fats",
+      "friendly_name": "Oils and Fats"
     }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "flours",
+      "friendly_name": "Flours"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "sweeteners",
+      "friendly_name": "Sweeteners"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "bakemixes",
+      "friendly_name": "Bakemixes"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "protein_powders",
+      "friendly_name": "Protein Powders"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "snacks",
+      "friendly_name": "Snacks"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "vitamins",
+      "friendly_name": "Vitamins"
+    }
+  }
 ]
-    

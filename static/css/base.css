@@ -1,14 +1,17 @@
 /* ----------------  Variables  of fonts and colors ------------ */
 :root {
     --color-primary: #37474f;
-    --color-primary-light: #62727b; 
+    --color-primary-light: #62727b;
     --color-primary-dark: #102027;
     --color-secondary: #f5f5f6;
     --color-secondary-light: #ffffff;
     --color-secondary-dark: #c2c2c3;
-    --color-black: #000; /* black */
-    --color-white: #fff; /* white */
-    --color-red: #dc3545; /* Red */
+    --color-black: #000;
+    /* black */
+    --color-white: #fff;
+    /* white */
+    --color-red: #dc3545;
+    /* Red */
     --color-banner-bg: #f5f5f6;
     --color-html-bg: #e1e2e1;
     --color-text-body: #37474f;
@@ -17,7 +20,7 @@
     --default-footer-font-size: 1rem;
     --default-copyrigth-size: 0.75rem;
     --small-font-size: 1rem;
-  }
+}
 
 
 /* ----------------  General Styling ------------ */
@@ -27,7 +30,7 @@ html {
 }
 
 #banner {
-    height:fit-content;
+    height: fit-content;
 }
 
 body {
@@ -105,7 +108,7 @@ body {
 }
 
 .text-light-custom {
-    color: var(--color-secondary-light)!important;
+    color: var(--color-secondary-light) !important;
 }
 
 .border-black {
@@ -118,8 +121,8 @@ body {
 
 .dark-bg,
 .topnav-bg-color {
-   /* background: #66bb6a; */
-   background: var(--color-primary);
+    /* background: #66bb6a; */
+    background: var(--color-primary);
 }
 
 .navbar-toggler {
@@ -180,9 +183,9 @@ hr {
 }
 
 .content-main {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .carousel-item img {
@@ -192,9 +195,9 @@ hr {
 }
 
 .carousel-bg-slide-1 {
-  background: url(/media/carousel/carousel_keto_tiny.png) no-repeat center center;
-  height: 100%;
-  background-size: contain;
+    background: url(/media/carousel/carousel_keto_tiny.png) no-repeat center center;
+    height: 100%;
+    background-size: contain;
 }
 
 .carousel-bg-slide-2 {
@@ -216,9 +219,9 @@ hr {
 }
 
 .carousel-bg-slide-5 {
-  background: url(/media/carousel/carousel_mediterranean_tiny.png) no-repeat center center;
-  height: 100%;
-  background-size: contain;
+    background: url(/media/carousel/carousel_mediterranean_tiny.png) no-repeat center center;
+    height: 100%;
+    background-size: contain;
 }
 
 .carousel-bg-slide-6 {
@@ -289,7 +292,7 @@ hr {
 
 .card:focus,
 .card:active,
-.card:hover{
+.card:hover {
     transform: scale(1.05);
 }
 
@@ -299,7 +302,7 @@ hr {
 
 .card-footer a,
 .card-footer p {
-    color: var(--color-secondary)!important;
+    color: var(--color-secondary) !important;
 }
 
 
@@ -362,13 +365,13 @@ hr {
 /* -------------------------------- Product Page */
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: var(--color-banner-bg);
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--color-banner-bg);
+    z-index: -1;
 }
 
 .product-font {
@@ -389,7 +392,7 @@ hr {
     color: var(--color-primary-dark);
 }
 
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
     background: var(--color-secondary) !important;
     color: var(--color-primary) !important;
 }
@@ -400,7 +403,7 @@ a.category-badge > span.badge:hover {
 }
 
 .align-start {
-    align-items: start!important;
+    align-items: start !important;
 }
 
 
@@ -428,9 +431,9 @@ a.category-badge > span.badge:hover {
 
 .btn-outline-shop-bag,
 .btn-outline-shop {
-    background: var(--color-text-logo)!important;
-    color: var(--color-primary-dark)!important;
-    border: 1px solid var(--color-primary-dark)!important;
+    background: var(--color-text-logo) !important;
+    color: var(--color-primary-dark) !important;
+    border: 1px solid var(--color-primary-dark) !important;
     border-radius: 0.5rem;
 }
 
@@ -440,8 +443,8 @@ a.category-badge > span.badge:hover {
 .btn-outline-shop-bag:hover,
 .btn-outline-shop-bag:focus,
 .btn-outline-shop-bag:active {
-    background: var(--color-primary)!important;
-    color: var(--color-secondary)!important;
+    background: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
 }
 
 
@@ -487,16 +490,16 @@ a.category-badge > span.badge:hover {
 }
 
 .toast {
-    border-radius: 10px!important;
+    border-radius: 10px !important;
 }
 
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -562,7 +565,7 @@ a.category-badge > span.badge:hover {
 }
 
 .diet-card>h4 {
-    color: var(--color-secondary-dark)!important;
+    color: var(--color-secondary-dark) !important;
 }
 
 
@@ -570,9 +573,9 @@ a.category-badge > span.badge:hover {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 
@@ -607,11 +610,11 @@ a.category-badge > span.badge:hover {
 
 /* --------------------------------   Allouth Forms Styling */
 
-    /*------------    Signup Form */
+/*------------    Signup Form */
 
-    #dp-section-header.container {
-        width: 100%;
-    }
+#dp-section-header.container {
+    width: 100%;
+}
 
 
 /* --------------------------------   Review Form */
@@ -627,17 +630,17 @@ textarea.form-control {
 .review-container {
     border-radius: 22px;
     background: #212121;
-    -webkit-box-shadow:  13px 13px 25px #1b1b1b,
-                -13px -13px 25px #272727;
-            box-shadow:  13px 13px 25px #1b1b1b,
-                -13px -13px 25px #272727;
+    -webkit-box-shadow: 13px 13px 25px #1b1b1b,
+        -13px -13px 25px #272727;
+    box-shadow: 13px 13px 25px #1b1b1b,
+        -13px -13px 25px #272727;
     border-width: 3px;
     border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* fixed top navbar only on medium and up */
-@media (max-width: 575px) {    
-    
+@media (max-width: 575px) {
+
     .footer-section-right {
         text-align: center;
         padding-top: 2rem;
@@ -646,7 +649,7 @@ textarea.form-control {
     .footer-section-right ul {
         display: flex;
         flex-direction: row;
-        justify-content:space-around;
+        justify-content: space-around;
     }
 
     .footer-section-left {
@@ -656,7 +659,7 @@ textarea.form-control {
 
 }
 
-@media (max-width: 411px) {    
+@media (max-width: 411px) {
     .header-container {
         padding-top: 90.8px;
     }
@@ -674,7 +677,7 @@ textarea.form-control {
     }
 }
 
-@media (max-width:992px) {    
+@media (max-width:992px) {
     .header-container {
         padding-top: 116.8px;
     }
@@ -692,7 +695,7 @@ textarea.form-control {
     }
 
     .nav-link i.la-lg {
-      font-size: 1rem;  
+        font-size: 1rem;
     }
 
     .navbar-toggler {
@@ -703,7 +706,7 @@ textarea.form-control {
     #delivery-banner h4 {
         font-size: .9rem;
     }
-    
+
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem;
@@ -719,7 +722,7 @@ textarea.form-control {
     .decrement-qty {
         padding: 0.25rem .5rem !important;
     }
-    
+
 }
 
 @media (min-width: 993px) {
@@ -727,4 +730,3 @@ textarea.form-control {
         padding-top: 165.2px;
     }
 }
-
