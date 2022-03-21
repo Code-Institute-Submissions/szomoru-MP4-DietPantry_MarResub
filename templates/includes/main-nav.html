@@ -7,10 +7,8 @@
             </a>
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-text dropdown-item">By Price</a>
-                <hr>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-text dropdown-item ">By
                     Category</a>
-                <hr>
                 <a href="{% url 'products' %}" class="dropdown-text dropdown-item">All Products</a>
             </div>
         </li>
@@ -23,13 +21,9 @@
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="baking-link">
                 <a href="{% url 'products' %}?category=oils_and_fats" class="dropdown-text dropdown-item">Oils and
                     Fats</a>
-                <hr>
                 <a href="{% url 'products' %}?category=flours" class="dropdown-text dropdown-item">Flours</a>
-                <hr>
                 <a href="{% url 'products' %}?category=sweeteners" class="dropdown-text dropdown-item">Sweeteners</a>
-                <hr>
                 <a href="{% url 'products' %}?category=bakemixes" class="dropdown-text dropdown-item">Bakemixes</a>
-                <hr>
                 <a href="{% url 'products' %}?category=oils_and_fats,flours,sweeteners,bakemixes"
                     class="dropdown-text dropdown-item">All Baking Ingredients</a>
             </div>
@@ -43,11 +37,8 @@
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="supplements-link">
                 <a href="{% url 'products' %}?category=protein_powders" class="dropdown-text dropdown-item">Protein
                     Powders</a>
-                <hr>
                 <a href="{% url 'products' %}?category=snacks" class="dropdown-text dropdown-item">Snacks</a>
-                <hr>
                 <a href="{% url 'products' %}?category=vitamins" class="dropdown-text dropdown-item">Vitamins</a>
-                <hr>
                 <a href="{% url 'products' %}?category=protein_powders,snacks,vitamins"
                     class="dropdown-text dropdown-item">All Supplements</a>
             </div>
@@ -60,11 +51,8 @@
             </a>
             <div class="dropdown-menu dropdown-bg border-0" aria-labelledby="all-diets-link">
                 <a href="{% url 'keto' %}" class="dropdown-text dropdown-item">KETO</a>
-                <hr>
                 <a href="{% url 'lowcarb' %}" class="dropdown-text dropdown-item ">Low Carb</a>
-                <hr>
                 <a href="{% url 'highprotein' %}" class="dropdown-text dropdown-item ">High Protein</a>
-                <hr>
                 <a href="{% url 'mediterranean' %}" class="dropdown-text dropdown-item">Mediterranean</a>
             </div>
         </li>
