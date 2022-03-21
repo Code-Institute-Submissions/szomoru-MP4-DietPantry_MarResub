@@ -469,13 +469,13 @@ a.category-badge > span.badge:hover {
 }
 
 .toast-header-text {
-    color: var(--color-text-logo);
+    align-items: center;
     font-size: var(--default-font-size);
 }
 
 .toast-body {
     color: var(--color-text-logo);
-    font-size: var(--small-font-size);
+    font-size: 1rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -483,6 +483,7 @@ a.category-badge > span.badge:hover {
 .toast-header {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    color: var(--color-secondary-light);
 }
 
 .toast {
@@ -666,6 +667,10 @@ textarea.form-control {
 
     .social-link a i {
         font-size: 2rem;
+    }
+
+    .toast-body {
+        font-size: .75rem;
     }
 }
 
