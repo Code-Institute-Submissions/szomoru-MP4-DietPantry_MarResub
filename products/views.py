@@ -162,7 +162,7 @@ def add_review(request, product_id):
     Product managemenet - adding product review to the webstore
     """
 
-    product = get_object_or_404(ProductReview, pk=product_id)
+    product = get_object_or_404(Product, pk=product_id)
 
     if request.user.is_authenticated:
         if request.method == 'POST':
