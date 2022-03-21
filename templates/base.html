@@ -71,6 +71,16 @@
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
               <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                {% if request.user.is_authenticated %}
+                    <li class="list-inline-item">
+                        <a class="nav-link text-black d-block" href="{% url 'favourite' %}">
+                            <div class="text-center color-secondary">
+                                <div><i class="far fa-thumbs-up fa-lg" aria-hidden="true"></i></div>
+                                <p class="my-0">My Favourites</p>
+                            </div>
+                        </a>
+                    </li>
+                {% endif %}
                 <li id="my-account" class="list-inline-item dropdown">
                   <a class="color-secondary border-radius nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div id="my_account" class="text-center">
