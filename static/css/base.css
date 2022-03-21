@@ -72,7 +72,7 @@ body {
 }
 
 .enter-button {
-    background: var(--color-secondary-dark);
+    background: var(--color-primary-dark);
     color: var(--color-secondary-light);
     min-width: 260px;
     border-radius: 15px;
@@ -89,7 +89,8 @@ body {
 .enter-button:active,
 .enter-button:focus {
     background: var(--color-secondary-light);
-    color: var(--color-text-body);
+    color: var(--color-primary-dark);
+    border: solid 1px var(--color-primary-dark)
 }
 
 .btn-black:hover,
@@ -255,7 +256,7 @@ hr {
 }
 
 #mission h1 {
-    color: var(--color-secondary);
+    color: var(--color-primary-dark);
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
@@ -268,7 +269,7 @@ hr {
 
 #mission p {
     color: var(--color-text-body);
-    font-size: var(--default-font-size);
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -306,12 +307,12 @@ hr {
 
 .footer-style li a {
     text-decoration: none;
-    color: var(--color-secondary-dark);
+    color: var(--color-secondary-light);
 }
 
 .footer-section-left {
     text-align: right;
-    border-right: solid 0.1rem var(--color-secondary-dark);
+    border-right: solid 0.1rem var(--color-secondary-light);
     font-size: var(--default-footer-font-size);
 }
 
@@ -337,18 +338,18 @@ hr {
 
 
 .social-link a i {
-    font-size: var(--default-footer-font-size);
-    color: var(--color-secondary-dark);
+    font-size: 1.5rem;
+    color: var(--color-secondary-light);
     margin-top: 5px;
 }
 
 .footer_back-to-top {
     text-decoration: none;
-    color: var(--color-secondary-dark);
+    color: var(--color-secondary-light);
 }
 
 .footer_back-to-top:hover {
-    color: var(--color-secondary);
+    color: var(--color-secondary-light);
     text-decoration: none;
     transform: scale(1.1);
 }
@@ -663,6 +664,10 @@ textarea.form-control {
 
     .nav-item-text {
         display: none;
+    }
+
+    .social-link a i {
+        font-size: 2rem;
     }
 }
 
