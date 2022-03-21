@@ -25,11 +25,11 @@
                     <div class="row justify-content-center">
                         <div class="image-container shadow-lg my-5">
                             {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}" target="_blank">
+                                <a href="{{ product.image.url }}" target="_blank">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
+                                <a href="{{ MEDIA_URL }}noimage.png" target="_blank">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                             {% endif %}
@@ -160,24 +160,22 @@
                 </div>
             </div>
             <div class="row align-start justify-content-center">
-                <div class="border border-secondary rounded col-12 col-md-10 col-lg-6 mt-5">  
+                <div class="col-12 col-md-10 col-lg-6 mt-5">  
                     <h4 class="text-black text-center mt-3">Other users opinion:</h4>
                     <!-- Showing all product reviews-->
                     {% for review in product.review.all %}
-                        <div class="card mt-5">
-                                <p class="card-head my-1 lead text-center">{{ review.title }}</p>
-                                <p class="small text-center">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>
-                                <hr class="hr-card-body mb-3">
-                                <p class="card-body">{{ review.content }}</p>
-                                <p class="small"><span class="text-left"><i class="ml-5 fas fa-star"></i> {{ review.rating }}</span> <span class="text-right"> </span></p>
-                            <!-- Edit Review Button-->
-                            {% if review.user == request.user or request.user.is_superuser %}
-                                <div class="card-title">
-                                    <a class="btn btn-info edit-btn" href="{% url 'edit_review' review.id %}#review">
-                                        Edit Review
-                                    </a>
-                                </div>
-                            {% endif %}                            
+                        <div class="card border border-secondary rounded m-3">
+                            <div class="card-body p-2">
+                                <h5 class="card-title my-1 text-left">{{ review.title }}</h5>
+                                <h6 class="card-subtitle text-left">by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</h6>
+                                <hr class="my-2 w-100">
+                                <p class="card-text text-justify mt-2">{{ review.content }}</p>
+                                <p class="small text-right"><i class="ml-5 fas fa-star"></i>{{ review.rating }} out of 3</p>
+                                <!-- Edit Review Button-->
+                                {% if review.user == request.user or request.user.is_superuser %}
+                                    <a class="btn btn-sm btn-secondary" href="{% url 'edit_review' review.id %}#review">Edit Review</a>
+                                {% endif %}                            
+                            </div>
                         </div>
                     {% empty %}
                         <div class="text-center mt-5">
