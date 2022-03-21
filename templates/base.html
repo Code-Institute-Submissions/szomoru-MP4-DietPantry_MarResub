@@ -2,238 +2,246 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
 
-    {% block meta %}
-        <!-- Required meta tags -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+<head>
 
-    {% block extra_meta %}
-    {% endblock %}
+  {% block meta %}
+  <!-- Required meta tags -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block corecss %}
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <!-- Google font link -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Sacramento&display=swap" rel="stylesheet">
-        <!-- Link to the base.css for styling -->
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- Google font link -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Sacramento&display=swap" rel="stylesheet">
+  <!-- Link to the base.css for styling -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
 
-    {% block corejs %}
-        <script src="https://kit.fontawesome.com/c93dae6d85.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-        </script>
-        <!-- STRIPE PAYMENT -->
-        <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/c93dae6d85.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+  </script>
+  <!-- STRIPE PAYMENT -->
+  <script src="https://js.stripe.com/v3/"></script>
+  {% endblock %}
 
-    <title>The Diet Pantry {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-      <header class="container-fluid fixed-top topnav-bg-color">
-        <div class="container-fluid">
-          <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-              <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font my-0 color-secondary-bg"><strong>The Diet Pantry</strong></h2>
-              </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-              <form method="GET" action="">
-                <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                    <div class="input-group-append">
-                        <button class="form-control btn border border-black rounded-0 color-secondary" type="submit">
-                            <span class="icon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-              </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-              <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                <li id="my-account" class="list-inline-item dropdown">
-                  <a class="color-secondary border-radius nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div id="my_account" class="text-center">
-                        <div><i class="fas fa-user fa-lg"></i></div>
-                        <p class="my-0">My Account</p>
-                    </div>
-                  </a>
-                  <div class="dropdown-menu dropdown-bg border-0 border-radius" aria-labelledby="user-options">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-text dropdown-item">Product Management</a>
-                        {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-text dropdown-item">My Profile</a>
-                        <a href="{% url 'favourite' %}" class="dropdown-text dropdown-item">My Favourites</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-text dropdown-item">Logout</a>
-                    {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-text dropdown-item">Register</a>
-                        <hr>
-                        <a href="{% url 'account_login' %}" class="dropdown-text dropdown-item">Login</a>
-                    {% endif %}
-                  </div>
-                </li>
-                <li id="shopping_bag" class="list-inline-item border-radius">
-                  <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                    <div class="text-center color-secondary">
-                        <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                        <p class="my-0">
-                            {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
-                            {% else %}
-                                $0.00
-                            {% endif %}
-                        </p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>The Diet Pantry {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+  <header class="container-fluid fixed-top topnav-bg-color">
+    <div class="container-fluid">
+      <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h2 class="logo-font my-0 color-secondary-bg"><strong>The Diet Pantry</strong></h2>
+          </a>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <form method="GET" action="">
+            <div class="input-group w-100">
+              <input class="form-control border border-black rounded-0" type="text" name="q"
+                placeholder="Search our site">
+              <div class="input-group-append">
+                <button class="form-control btn border border-black rounded-0 color-secondary" type="submit">
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
                 </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-          </div>           
+              </div>
+            </div>
+          </form>
         </div>
-        <div id="delivery-banner" class="row text-center">
-          <div class="col bg-dark nav-font">
-              <h4 class="nav-font text-uppercase my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-          </div> 
-        </div>
-
-      </header>
-
-        {% if messages %}
-          <div class="message-container">
-            {% for message in messages %}
-              {% with message.level as level %}
-                {% if level == 40 %}
-                  {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                  {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                  {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                  {% include 'includes/toasts/toast_info.html' %}
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li id="my-account" class="list-inline-item dropdown">
+              <a class="color-secondary border-radius nav-link" href="#" id="user-options" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div id="my_account" class="text-center">
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My Account</p>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-bg border-0 border-radius" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-text dropdown-item">Product Management</a>
                 {% endif %}
-              {% endwith %}
-            {% endfor %}
-          </div>
-        {% endif %}
-
-        <main class="container-fluid">
-          {% block page-header %}
-          {% endblock %}
-          {% block content %}
-          {% endblock %}
-        </main>
-
-        <footer>
-          <div class="container-fluid footer-style pt-5 mt-5 dark-bg">
-            <div class="row justify-content-center">
-                <a href="#dp-section-header" class="footer_back-to-top text-center">
-                  <div><i class="fas fa-chevron-up"></i></div>
-                  <p>Back to top</p>  
-                </a>
-            </div>
-            
-            <hr class="w-50">
-
-            <div class="row justify-content-center">
-              <div class="footer-section-left col-lg-4 col-md-4 col-sm-6">
-                <ul>
-                  <li>
-                    <a href="{% url 'products' %}">
-                      <span class="">All Products</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="{% url 'products' %}?category=oils_and_fats,flours,sweeteners,bakemixes">
-                      <span class="">Baking Ingredients</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="{% url 'products' %}?category=protein_powders,snacks,vitamins">
-                      <span class="">Supplements</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <span class="">Diet Library</span>
-                    </a>
-                </li>
-                </ul>
+                <a href="{% url 'profile' %}" class="dropdown-text dropdown-item">My Profile</a>
+                <a href="{% url 'favourite' %}" class="dropdown-text dropdown-item">My Favourites</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-text dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-text dropdown-item">Register</a>
+                <hr>
+                <a href="{% url 'account_login' %}" class="dropdown-text dropdown-item">Login</a>
+                {% endif %}
               </div>
-            
-              <div class="col-lg-4 col-md-4 col-sm-6 footer-section-right">
-                <ul class="p-0">
-                  <li class="list-item social-link">
-                      <a href="https://www.facebook.com/gergely.vig1/" target="_blank">
-                      <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                      <span class="sr-only">Facebook</span>
-                      </a>
-                  </li>
-                  <li class="list-item social-link">
-                      <a href="https://github.com/szomoru/" target="_blank">
-                      <i class="fab fa-github-square" aria-hidden="true"></i>
-                      <span class="sr-only">Github</span>
-                      </a>
-                  </li>
-                  <li class="list-item social-link">
-                      <a href="https://www.linkedin.com/in/gergely-vig-5151596/" target="_blank">
-                      <i class="fab fa-linkedin" aria-hidden="true"></i>
-                      <span class="sr-only">LinkedIn</span>
-                      </a>
-                  </li>
-                  <li class="list-item social-link">
-                      <a href="https://www.instagram.com/gergelyvig/" target="_blank">
-                      <i class="fab fa-instagram-square" aria-hidden="true"></i>
-                      <span class="sr-only">Instagram</span>
-                      </a>
-                  </li>
-              </ul>
-              </div>
-            </div>
-            <div class="row copyright pt-5">
-              <div class="col color-secondary-dark text-center">
-                <span>
-                  © Copyright 2022. Gergely Vig. This project is made for educational purposes only. No commercial revenue is generated from the project.
-                </span>
-            </div>
-            </div>
-          </div>
-        </footer>
+            </li>
+            <li id="shopping_bag" class="list-inline-item border-radius">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                href="{% url 'view_bag' %}">
+                <div class="text-center color-secondary">
+                  <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                  <p class="my-0">
+                    {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                    $0.00
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+            aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          {% include 'includes/mobile-top-header.html' %}
+          {% include 'includes/main-nav.html' %}
+        </nav>
+      </div>
+    </div>
+    <div id="delivery-banner" class="row text-center">
+      <div class="col bg-dark nav-font">
+        <h4 class="nav-font text-uppercase my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+      </div>
+    </div>
 
-        {% block postloadjs %}
-        <script type="text/javascript">
-            $('.toast').toast('show');
-        </script>
-        {% endblock %}
-      
-  </body>
+  </header>
+
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <main class="container-fluid">
+    {% block page-header %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <div class="container-fluid footer-style pt-5 mt-5 dark-bg">
+      <div class="row justify-content-center">
+        <a href="#dp-section-header" class="footer_back-to-top text-center">
+          <div><i class="fas fa-chevron-up"></i></div>
+          <p>Back to top</p>
+        </a>
+      </div>
+
+      <hr class="w-50">
+
+      <div class="row justify-content-center">
+        <div class="footer-section-left col-lg-4 col-md-4 col-sm-6">
+          <ul>
+            <li>
+              <a href="{% url 'products' %}">
+                <span class="">All Products</span>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'products' %}?category=oils_and_fats,flours,sweeteners,bakemixes">
+                <span class="">Baking Ingredients</span>
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'products' %}?category=protein_powders,snacks,vitamins">
+                <span class="">Supplements</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="">Diet Library</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 footer-section-right">
+          <ul class="p-0">
+            <li class="list-item social-link">
+              <a href="https://www.facebook.com/gergely.vig1/" target="_blank">
+                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+            <li class="list-item social-link">
+              <a href="https://github.com/szomoru/" target="_blank">
+                <i class="fab fa-github-square" aria-hidden="true"></i>
+                <span class="sr-only">Github</span>
+              </a>
+            </li>
+            <li class="list-item social-link">
+              <a href="https://www.linkedin.com/in/gergely-vig-5151596/" target="_blank">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+            </li>
+            <li class="list-item social-link">
+              <a href="https://www.instagram.com/gergelyvig/" target="_blank">
+                <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyright pt-5">
+        <div class="col color-secondary-dark text-center">
+          <span>
+            © Copyright 2022. Gergely Vig. This project is made for educational purposes only. No commercial revenue is
+            generated from the project.
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {% block postloadjs %}
+  <script type="text/javascript">
+    $('.toast').toast('show');
+  </script>
+  {% endblock %}
+
+</body>
+
 </html>

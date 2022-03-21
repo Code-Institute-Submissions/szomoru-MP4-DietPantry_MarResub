@@ -2,94 +2,102 @@
 {% load static %}
 
 {% block page-header %}
-    <div id="dp-section-header" class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div id="dp-section-header" class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col text-center">
-                    <hr class="mt-4">
-                    <h1 class="product-font">My Favourite Products</h1>
-                    <hr class="mb-4">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product-container col-10 offset-1 mt-3">
-                    
-                    <div class="row">
-                        {% for product in favourite.products.all %}
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="card h-100 shadow-lg">
-                                    {% if product.image %}
-                                    <a href="{% url 'product_detail' product.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'product_detail' product.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                    </a>
-                                    {% endif %}
-                                    <div class="card-body pb-0">
-                                        <hr class="hr-card-body">
-                                        <p class="mb-0">{{ product.name }}</p>
-                                        {% if request.user.is_authenticated %}
-                                            {% if request.user.is_superuser %}
-                                                <div class="row justify-content-center p-1">
-                                                    <a class="btn-sm btn-warning m-1 text-center" href="{% url 'edit_product' product.id %}">
-                                                        <i class="m-1 fas fa-edit"></i><br>Edit</a>
-                                                    <a class="btn-sm btn-danger m-1 text-center" href="{% url 'delete_product' product.id %}">
-                                                        <i class="m-1 fas fa-trash-alt"></i><br>Delete</a>
-                                                </div>
-                                            {% endif %}
-                                                <div class="row justify-content-center p-1">
-                                                    <a class="btn-sm btn-info m-1 text-center" href="{% url 'product_detail' product.id %}"><i class="m-1 fas fa-info"></i><br>Details</a>
-                                                    <a class="btn-sm btn-danger m-1 text-center" href="{% url 'remove_from_favourites' product.id %}"><i class="m-1 fas fa-trash-alt"></i><br>Remove from Favourites</a>
-                                                </div>
-                                        {% endif %}
-                                        <hr class="hr-card-body mb-3">
-                                    </div>
-                                    <div class="card-footer pt-0 border-0 text-left">
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="lead mb-0 text-right font-weight-bold mt-3">${{ product.price }}</p>
-                                                {% if product.category %}
-                                                    <p class="small mt-1 mb-0">
-                                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                        </a>
-                                                    </p>
-                                                {% endif %} 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr class="w-75 mt-3 mb-3">
-                            </div>
-                            {% empty %}
-                            <div class="col-12">
-                                <div class="row justify-content-center">
-                                    <!-- If the favourite list is Empty -->
-                                    <div class="text-center mt-3">
-                                        <h3 class="font-weight-bold text-uppercase">You still do not have any favourite Product(s)!</h3>
-                                        <a class="btn btn-outline-shop btn-lg mt-5" href="{% url 'products' %}">
-                                            <span class="icon">
-                                                <i class="fas fa-chevron-left"></i>
-                                            </span>
-                                            <span class="text-uppercase font-weight-bold">Keep Shopping</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center">
+            <hr class="mt-4">
+            <h1 class="product-font">My Favourite Products</h1>
+            <hr class="mb-4">
         </div>
     </div>
-    
+    <div class="row">
+        <div class="product-container col-10 offset-1 mt-3">
+
+            <div class="row">
+                {% for product in favourite.products.all %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card h-100 shadow-lg">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <hr class="hr-card-body">
+                            <p class="mb-0">{{ product.name }}</p>
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <div class="row justify-content-center p-1">
+                                <a class="btn-sm btn-warning m-1 text-center"
+                                    href="{% url 'edit_product' product.id %}">
+                                    <i class="m-1 fas fa-edit"></i><br>Edit</a>
+                                <a class="btn-sm btn-danger m-1 text-center"
+                                    href="{% url 'delete_product' product.id %}">
+                                    <i class="m-1 fas fa-trash-alt"></i><br>Delete</a>
+                            </div>
+                            {% endif %}
+                            <div class="row justify-content-center p-1">
+                                <a class="btn-sm btn-info m-1 text-center"
+                                    href="{% url 'product_detail' product.id %}"><i
+                                        class="m-1 fas fa-info"></i><br>Details</a>
+                                <a class="btn-sm btn-danger m-1 text-center"
+                                    href="{% url 'remove_from_favourites' product.id %}"><i
+                                        class="m-1 fas fa-trash-alt"></i><br>Remove from Favourites</a>
+                            </div>
+                            {% endif %}
+                            <hr class="hr-card-body mb-3">
+                        </div>
+                        <div class="card-footer pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-right font-weight-bold mt-3">${{ product.price }}</p>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-75 mt-3 mb-3">
+                </div>
+                {% empty %}
+                <div class="col-12">
+                    <div class="row justify-content-center">
+                        <!-- If the favourite list is Empty -->
+                        <div class="text-center mt-3">
+                            <h3 class="font-weight-bold text-uppercase">You still do not have any favourite Product(s)!
+                            </h3>
+                            <a class="btn btn-outline-shop btn-lg mt-5" href="{% url 'products' %}">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase font-weight-bold">Keep Shopping</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
