@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load crispy_forms_tags %}
 
 
 {% block page-header %}
@@ -132,8 +131,9 @@
 
             <!-- Product Review Section -->
             <div id="review" class="row align-start justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4 mt-5">
-                    <h2 class="text-black font-weight-bold mt-5">Other users opinion:</h2>
+                <div class="border col-12 col-md-10 col-lg-6 mt-5">
+                    <h4 class="text-black text-center my-3">We would like to hear your opinion about the <strong>{{ product.name }}</strong>:</h4>
+                    
                     {% if request.user.is_authenticated %}
                         {% if edit %}
                             <!-- Edit Review Form -->
@@ -155,28 +155,30 @@
                             </form>
                         {% endif %}
                     {% else %}
-                        <p class="small"> You must need to have an account to be able to leave a product review.</p>
+                        <p class="text-center small"> You need to have an account to be able to leave a product review.</p>
                     {% endif %}
                 </div>
             </div>
             <div class="row align-start justify-content-center">
-                <div class="col-12 col-md-10 col-lg-6">  
+                <div class="border col-12 col-md-10 col-lg-6 mt-5">  
+                    <h4 class="text-black text-center mt-3">Other users opinion:</h4>
                     <!-- Showing all product reviews-->
                     {% for review in product.review.all %}
-                        <div class="card review-container mt-5">
+                        <div class="card mt-5">
+                            <div class="card-head">
+                                <p class="small"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>    
+                                <p class="card-title">{{ review.title }}<i class="ml-5 fas fa-star"></i> {{ review.rating }}</p>
+                                <p class="card-text lead">{{ review.content }}</p>
+                            </div>
                             <!-- Edit Review Button-->
                             {% if review.user == request.user or request.user.is_superuser %}
-                                <div class="card-head">
-                                    <p class="small"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>    
-                                    <p class="card-title">{{ review.title }}<i class="ml-5 fas fa-star"></i> {{ review.rating }}</p>
-                                    <p class="card-text lead">{{ review.content }}</p>
+                                <div class="card-body">
+                                    <a class="btn btn-info edit-btn" href="{% url 'edit_review' review.id %}#review">
+                                        Edit Review
+                                    </a>
                                 </div>
                             {% endif %}
-                            <div class="card-body">
-                                <a class="btn btn-info edit-btn" href="{% url 'edit_review' review.id %}#review">
-                                    Edit Review
-                                </a>
-                            </div>
+                            
                         </div>
                     {% empty %}
                         <div class="text-center mt-5">
