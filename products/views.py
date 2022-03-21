@@ -146,7 +146,7 @@ def delete_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     # Gets all the revies of the product
-    reviews = product.reviews.all()
+    reviews = product.review.all()
     product.delete()
     # delete all the connected reviews to the product
     reviews.delete()
