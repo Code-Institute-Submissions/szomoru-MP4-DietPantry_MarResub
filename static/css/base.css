@@ -42,7 +42,8 @@ body {
 
 .error-font {
     font-family: 'Lato', sans-serif;
-    color: var(--color-secondary-light);
+    color: var(--color-primary-dark);
+    font-size: var(--default-font-size);
 }
 
 /* from Bulma */
@@ -569,16 +570,6 @@ a.category-badge>span.badge:hover {
 }
 
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-
 /* --------------------------------   Product Form */
 
 .btn-file {
@@ -638,6 +629,16 @@ textarea.form-control {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
 /* fixed top navbar only on medium and up */
 @media (max-width: 575px) {
 
@@ -658,6 +659,7 @@ textarea.form-control {
     }
 
 }
+
 
 @media (max-width: 411px) {
     .header-container {
