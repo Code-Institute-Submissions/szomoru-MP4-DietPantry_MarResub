@@ -761,8 +761,10 @@ textarea.form-control {
         padding: 0.25rem .5rem !important;
     }
 
-    .error-font {
-        font-size: 1rem;
+    .error-font {        
+        font-size: 1.25rem;
+        text-align: justify;
+        margin: 2rem 0px!important;
     }
 
 }
