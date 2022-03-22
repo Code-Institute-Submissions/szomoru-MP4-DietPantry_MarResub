@@ -520,6 +520,16 @@ a.category-badge>span.badge:hover {
 }
 
 
+.close {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-secondary-light) !important;
+    text-shadow: none;
+    opacity: 0 !important;
+}
+
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
