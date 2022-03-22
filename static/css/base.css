@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /* ----------------  Variables  of fonts and colors ------------ */
 :root {
     --color-primary: #37474f;
@@ -6,12 +13,9 @@
     --color-secondary: #f5f5f6;
     --color-secondary-light: #ffffff;
     --color-secondary-dark: #c2c2c3;
-    --color-black: #000;
-    /* black */
-    --color-white: #fff;
-    /* white */
-    --color-red: #dc3545;
-    /* Red */
+    --color-black: #000; /* black */
+    --color-white: #fff; /* white */
+    --color-red: #dc3545; /* Red */
     --color-banner-bg: #f5f5f6;
     --color-html-bg: #e1e2e1;
     --color-text-body: #37474f;
@@ -30,6 +34,8 @@ html {
 }
 
 #banner {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
@@ -43,14 +49,20 @@ body {
 .error-font {
     font-family: 'Lato', sans-serif;
     color: var(--color-primary-dark);
-    font-size: var(--default-font-size);
+    font-size: 2rem;
 }
 
 /* from Bulma */
 .icon {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
 }
@@ -72,6 +84,8 @@ body {
 }
 
 .main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -192,7 +206,8 @@ hr {
 .carousel-item img {
     height: auto;
     width: auto;
-    object-fit: scale-down;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
 }
 
 .carousel-bg-slide-1 {
@@ -260,7 +275,9 @@ hr {
 /* -------------------------------- IMG styling */
 
 .row {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #mission h1 {
@@ -294,7 +311,9 @@ hr {
 .card:focus,
 .card:active,
 .card:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .card-footer {
@@ -359,7 +378,9 @@ hr {
 .footer_back-to-top:hover {
     color: yellow;
     text-decoration: none;
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 
@@ -404,7 +425,9 @@ a.category-badge>span.badge:hover {
 }
 
 .align-start {
-    align-items: start !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: start !important;
 }
 
 
@@ -473,7 +496,9 @@ a.category-badge>span.badge:hover {
 }
 
 .toast-header-text {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: var(--default-font-size);
 }
 
@@ -554,6 +579,8 @@ a.category-badge>span.badge:hover {
 }
 
 #diet-description {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
     min-height: fit-content;
 }
 
@@ -648,14 +675,24 @@ textarea.form-control {
     }
 
     .footer-section-right ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
 
     .footer-section-left {
         text-align: center;
         border-style: none;
+    }
+
+    .nav-item-text {
+        display: none;
     }
 
 }
@@ -664,10 +701,6 @@ textarea.form-control {
 @media (max-width: 411px) {
     .header-container {
         padding-top: 90.8px;
-    }
-
-    .nav-item-text {
-        display: none;
     }
 
     .social-link a i {
@@ -723,6 +756,10 @@ textarea.form-control {
     .increment-qty,
     .decrement-qty {
         padding: 0.25rem .5rem !important;
+    }
+
+    .error-font {
+        font-size: 1rem;
     }
 
 }
