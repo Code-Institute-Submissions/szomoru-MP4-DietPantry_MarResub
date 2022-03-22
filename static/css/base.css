@@ -656,7 +656,6 @@ textarea.form-control {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
-
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -709,6 +708,10 @@ textarea.form-control {
 
     .toast-body {
         font-size: .75rem;
+    }
+
+    .diet-card p {
+        font-size: .85rem;
     }
 }
 
