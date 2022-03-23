@@ -526,7 +526,7 @@ a.category-badge>span.badge:hover {
     line-height: 1;
     color: var(--color-secondary-light) !important;
     text-shadow: none;
-    opacity: 0 !important;
+    opacity: 1 !important;
 }
 
 
