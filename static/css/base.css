@@ -68,8 +68,7 @@ body {
 }
 
 .logo-font {
-    font-family: 'Sacramento';
-    /* color: #321911 !important; */
+    font-family: 'Sacramento', sans-serif;
     color: var(--color-text-logo) !important;
     padding: 5px;
     border-radius: 50%;
