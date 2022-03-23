@@ -1,5 +1,7 @@
 # The Diet Pantry
 
+<span id="breaktop"></span>
+
 <h1 align="center"><img src="docs/amiresponsive_tiny.jpg"/></h1>
 
 Welcome to My 4th milestone project at Code Institute. The Diet Pantry website is more or less the end of a long long and hard journey in the world of Coding. The purpose of this project 
@@ -12,9 +14,18 @@ This website is a fictional webshop for people who are following different type 
 [Github link](https://github.com/szomoru/MP4-DietPantry) 
 
 
-## ***Table of Contents***
+## Table of Contents
 
 [1. **UX**](#1-ux)
++   [1.1 Project Goals](#1.1-project-goals)
++   [1.2 Business Goals](#1.2-business-goals)
++   [1.3 Visitor Goals](#1.3-visitor-goals)
++   [1.4 Target Audience](#1.4-target-audience)
++   [1.5 User Stories](#1.5-user-stories)
+    +   [1.5.1 Visitor Goals](#1.5.1-visitor-goals)
+    +   [1.5.2 Consumer Goals (Unregistered)](#1.5.2-consumer-goals)
+    +   [1.5.3 Returning Consumer Goals (Registered)](#1.5.3-returning-consumer-goals)
+    +   [1.5.4 Administrator Goals](#1.5.4-administrator-goals)
 
 [2. **Features**](#2-features)
 
@@ -33,51 +44,85 @@ This website is a fictional webshop for people who are following different type 
 
 <hr>
 
--   ### User stories
+### **1.1 Project goals**
+-   Making a full-stack site based around business logic used to control a centrally-owned database. 
+-   The site provides an authentication mechanism and provides access to the site’s data based on the dataset. 
+-   Making a full-stack site that uses HTML, CSS, JavaScript, Python + Django.
+-   Creating a website that uses a relational database 
+-   Creating a website that uses Stripe payments 
+-   Creating a website that serves as a webshop to sell healthy food products   
 
-    -   #### First Time Visitor Goals
+### **1.2 Business goals**
+-   Creating a secure and professional e-commerce website. 
+-   Provide users acces to good quality healthy cooking/baking ingredients used in different type of diets 
+-   Makes profit with selling healthy food products 
+-   Makes healthy lifestyle and healthier food selection accessible to everyone
 
-        1. As a First Time Visitor, I want to easily understand the content of the webpage and the aim of the site and also to get a general picture about the type of the products.
-        2. As a First Time Visitor, I want Register for an Account
-        3. As a First Time Visitor, I want to be able to easily navigate through the site and get an overal picture about the site structure.
-        4. As a First Time Visitor, I want to see their social media availability, where i can get more information about the site or organisation / person behind that.
-        5. As a first Time Visitor i want to see clearly what content available for without registration and what requires registration. 
+### **1.3 Visitor goals**
+-   Get inspired beeing open minded to different diets and changing to a healthier food selection 
+-   Safely purchase products on the webshop
 
-    -   #### Unregistered User Goals
+### **1.4 Target audience**
+-   Everyone who has been following, following or planning to follow a healthier diet.
+-   Everyone who is interested to eat different
+-   Everyone who has to eat different because of some health issues (eg Diabetes, High Blood Pressure, Overweight)
 
-        1. As a Returning Visitor, I want to be able to login with my previously registered credentials.
-        2. As a Returning Visitor, I want to be able to register request for help.
-        3. As a Returning Visitor, I want to be able to apply to help someone else.
-        4. As a Returning Visitor, I want to be able to update my profile information.
-        5. As a Returning Visitor, I want to be able to edit my help request information.
-        6. As a Returning Visitor, I want to be able to delete my registered requests.
-        7. As a Returning Visitor, I want to be able to browse among all regitered tasks.
-    
-    
-    -   #### Registered User Goals
+### **1.5 User stories**
 
-        1. As a Registered User, I want to be able to login with my previously registered credentials.
-        2. As a Returning Visitor, I want to be able to register request for help.
-        3. As a Returning Visitor, I want to be able to apply to help someone else.
-        4. As a Returning Visitor, I want to be able to update my profile information.
-        5. As a Returning Visitor, I want to be able to edit my help request information.
-        6. As a Returning Visitor, I want to be able to delete my registered requests.
-        7. As a Returning Visitor, I want to be able to browse among all regitered tasks.
+-   #### **1.5.1 Visitor goals**
+    1.  As a visitor, I want to access the website from any device (PC / notebook / tablet / mobile )
+    2.  As a visitor, I want to be able navigtae through the website easily
+    3.  As a visitor i want to be able to get more background information about the company through socail media accounts
+    4.  As a visitor i want to be able to follow the company to see the lastest trends and news
+    5.  As a visitor i want to be able to contact the company and ask questions
+    6.  As a visitor i want to be able to see all the products on the website to see what it can offer me
+    7.  As a visitor i want to be able to search among the products or filter or sort them to get easily to a specific product
+    8.  As a visitor i want to be able to get more information about the product (product description, price, image about the product ...)
+    9.  As a visitor i want to be able to see what other peoples opinion about the product 
 
-    -   #### Admin Goals
-        As the admin i want to be able to delete any of the registered tasks.
+-   #### **1.5.2 Consumer goals**
+    1.  As a consumer i want to able to fill up a virtual shopping bag and purchasing the content of it.
+    2.  As a consumer i want to have control over the content of the shopping bag until the very last step of purchasing (payment)
+    3.  As a consumer i want to see the total value of my shopping bag including possible shipping fee
+    4.  As a consumer i want to have a fast and safe way to pay for the ordered products 
+    5.  As a consumer i want to have continous feedback about my selected operations on the website.
+    6.  As a consumer i want to have confirmation e-mail about my purchase with order number.
+    7.  As a consumer i want to have the possibility to create my own account to save my profile information and see my previous orders.
 
+-   #### **1.5.4 Returning consumer goals**
+    1.  As a returning consumer I have the same goals than the not returning consumers and more  
+    2.  As a returning customer I want to easily login/logout to my previously created account. I also want to see my order history
+    3.  As a returning consumer i want to be able to create my own favourite products database and add/remove products to that. 
+    4.  As a returning consumer i want to have full control over my password, I want to be able to reset or change it.
+    5.  As a returning consumer i want to see others people feedback about the product I also want to be able to write my opinion about the product 
+
+-   #### **1.5.5 Administrator goals**
+    1.  As an administartor i want to have control over the produts at the webshop. I want to be able to execute CRUD operations
+        -   Create
+        -   Read
+        -   Update
+        -   Delete
 
 -   ### Design
 
     -   #### Colour Scheme
         There are used 2 main color groups on the website. Both groups contain 3 color codes:
-        
-        -   [Primary colors](docs/primary_colors.jpg)
-        
-        -   [Secondary colors](docs/secondary_colors.jpg)
 
-        Both color groups are used either background or font color.
+        <details>
+        <summary>Primary colors</summary>
+
+        ![Primary colors](docs/primary_colors.jpg)
+
+        </details>
+
+        <details>
+        <summary>Seconary colors</summary>
+
+        ![Secondary colors](docs/secondary_colors.jpg)   
+
+        </details>    
+
+        Both color groups are used either background or font color. And there are also other blight colors are used on dark background to improve color contrast ratio.
             
         
 
@@ -114,12 +159,22 @@ This website is a fictional webshop for people who are following different type 
 
     -   [keto.html / lowcarb.html /  highprotein.html / mediterranean.html WireFrame](docs/wireframe/dietlibrary.png)
 
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
 
 ## 2. **Features**
 
 <hr>
  
- ### fgdg ###
+ ### Existing Features ###
+
+ ### Possible Future Features ###
+
+
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
 
 ## 3. **Database design**
 
@@ -127,7 +182,12 @@ This website is a fictional webshop for people who are following different type 
 
 There were used relational databases for this project. During development phase i have used SQLite, and in production Heroku PostgreSQL was used. You can find attached the database schema on the link bellow.
 
-[Database Design](docs/database_diagram.png)
+![Database Design](docs/database_diagram.png)
+
+
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
 
 
 ## 4. **Technologies used**
@@ -137,53 +197,81 @@ There were used relational databases for this project. During development phase 
 -   ### Languages ###
     -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
         -   HTML5 provides the structure and the content of my website
-    -   [CSS3]()
+    -   [CSS3](https://en.wikipedia.org/wiki/CSS)
         -   CSS3 provides the style of the HTML5 elements
-    -   [JavaScript]()
+    -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
         -   JS provides the interactive part
-    -   [Python]()
+    -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
         -   The backend of the website is provided by Python
+    -   [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+        -   Jinja is a web template language for python
 
-<br>
 
 -   ### Frameworks ###
-    -   [Django]()
+    -   [Django](https://www.djangoproject.com/)
         -   Django is used as Python framework in this project
 
-<br>
 
 -   ### Libraries ###
-    -   [Bootstrap CSS Framework]()
-    -   [Font Awesome]()
-    -   [Google Fonts]()
-    -   [JQuery]()
+    -   [Bootstrap CSS Framework](https://getbootstrap.com/)
+        -   One of the largest pre-built library of HTML and CSS components. It was used every section of the webpage just like buttons or navigation ...
+    -   [Font Awesome](https://fontawesome.com/)
+        -   This library is used for getting icons
+    -   [Google Fonts](https://fonts.google.com/)
+        -   Font library
+    -   [JQuery](https://jqueryui.com/)
+        -   JavaScript library. MAinly used to simplify DOM manipulation and JS simplification
 
-<br>
 
 -   ### Editors ###
-    -   [GitHub]()
-    -   [dbDiagram]()
-    -   [Balsamiq]()
+    -   [GitHub](https://github.com/)
+        -   Remote code repository. It was use for source control 
+    -   [dbDiagram](https://dbdiagram.io/)
+        -   Plan and visualize database structures
+    -   [Balsamiq](https://balsamiq.com/)
+        -   Wireframe creator for visual testing
 
-<br>
 
 -   ### Tools ###
-    -   [TinyPNG]()
-    -   [Autoprefixer]()
-    -   [Am I Responsive]()
-
-<br>
+    -   [TinyPNG](https://tinypng.com/)
+        -   Minimize image file size to deacrease the loading time, so maximize the webpage speed
+    -   [Autoprefixer](https://autoprefixer.github.io/)
+        -   Vendor prefixes to CSS rules 
+    -   [Am I Responsive](http://ami.responsivedesign.is/)
+        -   Creates demo views for ewsponsive design. Readme hero image was created by it.
+    -   [Lambdatest](https://www.lambdatest.com/)
+        -   Check website response across device types
 
 -   ### Database Management ###
-    -   [PostgreSQL]()
+    -   [SQLite3](https://www.sqlite.org/)
+        -   It was used as the Development Database
+    -   [PostgreSQL](https://www.postgresql.org/)
+        -   It was used as the production Database
 
-<br>
 
 -   ### Deployment platform(s) ###
-    -   [Heroku]()
-    -   [Amazon AWS]()
+    -   [Heroku](https://dashboard.heroku.com/)
+        -   Remote hosting platform, it was used to hos my project
+    -   [Amazon AWS](https://aws.amazon.com/)
+        -   AWS Amazon is used to store static and media files.
 
+-   ### Testing Tools ###
+    -   [Chrome DevTool](https://developer.chrome.com/docs/devtools/open/)
+        -   was used to check site responsiveness, and as a general debugger
+    -   [W3C Markup Validator](https://validator.w3.org/)
+        -   This Validator is used to check if there is any eror in the HTML5 code
+    -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+        -   This validator is used to check if there is any error in the CSS3 code
+    -   [JShint](https://jshint.com/)
+        -   JShint validator can find errors in JavaScript codes
+    -   [PEP8](http://pep8online.com/) 
+        -   was used to validate the python syntax.
+    -   [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+        -   was used to check the site's Performance, Accessibility, Best Practices, and SEO.
 
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
 
 ## **5. Testing**
 
@@ -193,15 +281,22 @@ You can find the detailed testing description by clicking on the link below:
 
 [TESTING.MD]()
 
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
+
 ## 6. **Deployment**
 
 <hr>
 
 -   ### Requirements for Deployment
 
-    * Python
+    * Python3
     * GitHub account
     * Heroku account
+    * Stripe account
+    * AWS Amazon account
+    * An emailaccount preferably Gmail
 
 
 ### Initial Deployment
@@ -363,7 +458,9 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/szomoru/MP4-DietPantry)
 
-
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
 
 ## 7. **Credits**
 
@@ -402,3 +499,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 -   My Mentor for helpful feedback.
 -   Thanks to my family specially my wife who taken over our 4 kids while i was doing my studies. 
+
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
