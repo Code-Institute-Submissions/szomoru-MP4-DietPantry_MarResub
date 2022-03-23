@@ -12,26 +12,26 @@ This website is a fictional webshop for people who are following different type 
 [Github link](https://github.com/szomoru/MP4-DietPantry) 
 
 
-## Table of Contents
+## ***Table of Contents***
 
-[User Experience (UX)](#ux)
+[1. **UX**](#1-ux)
 
-[Features](#features)
+[2. **Features**](#2-features)
 
-[Technologies Used](#technologies)
+[3. **Database Design**](#3-database-design)
 
-[JavaScripts](#scripts)
+[4. **Technologies Used**](#4-technologies-used)
 
-[Testing](#testing)
+[5. **Testing**](#5-testing)
 
-[Deployment](#deployment)
+[6. **Deployment**](#6-deployment)
 
-[Credits](#credits)
+[7. **Credits**](#7-credits)
 
 
-<a name="ux"></a>
+## 1. **UX**
 
-## User Experience (UX)
+<hr>
 
 -   ### User stories
 
@@ -71,17 +71,22 @@ This website is a fictional webshop for people who are following different type 
 -   ### Design
 
     -   #### Colour Scheme
-        There are used mainly 2 big color groups on the website:
-        <ul>
-            <li></li>
-            <li></li>
-        </ul>
+        There are used 2 main color groups on the website. Both groups contain 3 color codes:
+        
+        -   [Primary colors](docs/primary_colors.jpg)
+        
+        -   [Secondary colors](docs/secondary_colors.jpg)
+
+        Both color groups are used either background or font color.
+            
+        
 
     -   #### Typography
         There are 2 main font styles used through the webshop. The fonts were selected from the Google Font website. 
         <ul>
             <li><strong>Sacramento:</strong> This font is used only at the logo of the website. The reason is it is a handwriting style from the 50's - 60's. The reason to have that style for the logo that it gives more private feeling. It is needed since the name of the webshop refers to fill up someones pantry, which is already very private. </li>
-            <li><strong>Lato:</strong> This font is used the rest of the website. It is easy to read and longer texts are also look very good with this font. It provides stabilty and seriousness feeling. The designer of the font is <i>Łukasz Dziedzic</i>. He says about his design: <i>“Male and female, serious but friendly. With the feeling of the Summer,”</i>  </li>
+            <li><strong>Lato:</strong> This font is used the rest of the website. It is easy to read and longer texts are also look very good with this font. It provides stabilty and seriousness feeling. The designer of the font is <i>Łukasz Dziedzic</i>. He says about his design: <i>“Male and female, serious but friendly. With the feeling of the Summer ...”</i>  </li>
+            <li><strong>San-serif:</strong> This font is used as a Web safe font if the other 2 main fonts cannot be loaded some reason.</li>
         </ul>
 
     -   #### Imagery
@@ -99,7 +104,7 @@ This website is a fictional webshop for people who are following different type 
 
     -   [product_detail.html WireFrame](docs/wireframe/productdetail.png)
 
-    -   [profile.html](docs/wireframe/profile.png) 
+    -   [profile.html WireFrame](c/wireframe/profile.png) 
 
     -   [bag.html WireFrame](docs/wireframe/shoppingbag.png) 
 
@@ -110,65 +115,87 @@ This website is a fictional webshop for people who are following different type 
     -   [keto.html / lowcarb.html /  highprotein.html / mediterranean.html WireFrame](docs/wireframe/dietlibrary.png)
 
 
-<a name="technologies"></a>
+## 2. **Features**
 
-## **Technologies Used**
+<hr>
+ 
+ ### fgdg ###
+
+## 3. **Database design**
+
+<hr>
+
+There were used relational databases for this project. During development phase i have used SQLite, and in production Heroku PostgreSQL was used. You can find attached the database schema on the link bellow.
+
+[Database Design](docs/database_diagram.png)
+
+
+## 4. **Technologies used**
 
 <hr>
 
 -   ### Languages ###
-    -   HTML
-    -   CSS
-    -   JavaScript
-    -   Python
+    -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+        -   HTML5 provides the structure and the content of my website
+    -   [CSS3]()
+        -   CSS3 provides the style of the HTML5 elements
+    -   [JavaScript]()
+        -   JS provides the interactive part
+    -   [Python]()
+        -   The backend of the website is provided by Python
 
 <br>
 
 -   ### Frameworks ###
-    -   Django
+    -   [Django]()
+        -   Django is used as Python framework in this project
 
 <br>
 
 -   ### Libraries ###
-    -   Bootstrap CSS Framework
-    -   Font Awesome
-    -   Google Fonts
-    -   JQuery
+    -   [Bootstrap CSS Framework]()
+    -   [Font Awesome]()
+    -   [Google Fonts]()
+    -   [JQuery]()
 
 <br>
 
 -   ### Editors ###
-    -   GitHub
-    -   dbDiagram
-    -   Balsamiq
+    -   [GitHub]()
+    -   [dbDiagram]()
+    -   [Balsamiq]()
 
 <br>
 
 -   ### Tools ###
-    -   TinyPNG
-    -   Autoprefixer
-    -   Am I Responsive
+    -   [TinyPNG]()
+    -   [Autoprefixer]()
+    -   [Am I Responsive]()
 
 <br>
 
 -   ### Database Management ###
-    -   PostgreSQL
+    -   [PostgreSQL]()
 
 <br>
 
 -   ### Deployment platform(s) ###
-    -   Heroku:
-    -   Amazon AWS
+    -   [Heroku]()
+    -   [Amazon AWS]()
 
 
-<a name="testing"></a>
 
-## **Testing**
-### ***fdsgdf***
+## **5. Testing**
 
-<a name="deployment"></a>
+<hr>
 
-## **Deployment**
+You can find the detailed testing description by clicking on the link below:
+
+[TESTING.MD]()
+
+## 6. **Deployment**
+
+<hr>
 
 -   ### Requirements for Deployment
 
@@ -337,9 +364,10 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/szomoru/MP4-DietPantry)
 
 
-<a name="credits"></a>
 
-## Credits
+## 7. **Credits**
+
+<hr>
 
 ### Code
 
