@@ -92,7 +92,6 @@
                 <a href="{% url 'account_logout' %}" class="dropdown-text dropdown-item">Logout</a>
                 {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-text dropdown-item">Register</a>
-                <hr>
                 <a href="{% url 'account_login' %}" class="dropdown-text dropdown-item">Login</a>
                 {% endif %}
               </div>
@@ -104,9 +103,9 @@
                   <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                   <p class="my-0">
                     {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
+                      ${{ grand_total|floatformat:2 }}
                     {% else %}
-                    $0.00
+                      $0.00
                     {% endif %}
                   </p>
                 </div>
@@ -137,17 +136,17 @@
   {% if messages %}
   <div class="message-container">
     {% for message in messages %}
-    {% with message.level as level %}
-    {% if level == 40 %}
-    {% include 'includes/toasts/toast_error.html' %}
-    {% elif level == 30 %}
-    {% include 'includes/toasts/toast_warning.html' %}
-    {% elif level == 25 %}
-    {% include 'includes/toasts/toast_success.html' %}
-    {% else %}
-    {% include 'includes/toasts/toast_info.html' %}
-    {% endif %}
-    {% endwith %}
+      {% with message.level as level %}
+        {% if level == 40 %}
+          {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+          {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+          {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+          {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+      {% endwith %}
     {% endfor %}
   </div>
   {% endif %}
@@ -237,9 +236,9 @@
   </footer>
 
   {% block postloadjs %}
-  <script>
-    $('.toast').toast('show');
-  </script>
+    <script>
+      $('.toast').toast('show');
+    </script>
   {% endblock %}
 
 </body>
