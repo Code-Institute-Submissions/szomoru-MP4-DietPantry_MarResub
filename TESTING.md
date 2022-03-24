@@ -55,19 +55,26 @@
 5.  As a visitor i want to be able to contact the company and ask questions
     -   **Testing:** This also possible through the different social media platforms. If the contact is connected to an order, the order confirmation email contains all the correct contact informations.
 
+        <details>
+        <summary>Confirmation E-mail</summary>
+
         ![Confirmation Email](docs/test/order_contact.jpg)
+        </details>
 
     -   **Result:** ***PASSED***
 
 6.  As a visitor i want to be able to see all the products on the website to see what it can offer me
     -   **Testing:** By entering into the shop from the Home page the visitor can see all the products right way. From therepoint the visitor can sort the products, search for products or select different categories products. In the navigation bar - which is always visible on every screen - these possibilites are always given.
 
+        <details>
+        <summary>Sorting / Filtering / Searching Products</summary>
+
         ![Sorting Products](docs/test/sorting_products.jpg)
 
         ![Filtering Products](docs/test/filtering_products.jpg)
 
         ![Searching Products](docs/test/searching_products.jpg)
-
+        </details>
 
     -   **Result:** ***PASSED***
 
@@ -78,7 +85,11 @@
 8.  As a visitor i want to be able to get more information about the product (product description, price, image about the product ...)
     -   **Testing:** Every product has its on product detail page. The visitor can see all the detailed product information before place it into the shopping bag. The product detail page also provide extra information with the product reviews.
 
+        <details>
+        <summary>Product Detail</summary>
+
         ![Product Detail](docs/product_details.jpg)
+        </details>
 
     -   **Result:** ***PASSED***
 
@@ -89,31 +100,72 @@
     
 ### **1-2 Consumer Goals (Unregistered)**
 1.  As a consumer i want to able to fill up a virtual shopping bag and purchasing the content of it.
-    -   **Testing:**
-    -   **Result:** ***PASSED***
+    -   **Testing:** The consumer has the possibility to place any of the products into the shopping bag from the detailed product page. The consumer has the possibility to change the quantity of the products or even delete them from the shopping bag. Moreover the consumer can return back to the product page and continue shopping if she/he wants. When the consumer satisfied with the content of the shopping bag she/he can purchase them through a **secure payment** process, which is provided by **STRIPE** 
+    -   **Result:** All the above mentioned features has been actively tested and experienced no problem with them. The result of the consumer selected steps were continuesly cinfirmed by toasts. ***PASSED***
 
 2.  As a consumer i want to have control over the content of the shopping bag until the very last step of purchasing (payment)
-    -   **Testing:**
+    -   **Testing:** The cosumer has the possibility to manipulate the content of the shopping bag until the last payment step. The different possibilities on different pages towards the payment process:
+        - **Product Detail Page:** the consumer has the possibility to select the required quantity or return back to the Products 
+
+        - **Shopping Bag Page:** the consumer has the possibility to **change** the quantity of the selected product, **remove** the selected product or **continue shopping** by selecting the keep shopping button. On this page the consumer can manipulate the different products individually
+
+        - **Checkout Page:** at this stage the consumer cannot modify the products, but has the possibility to return back to the shopping bag by selecting the "Adjust bag" button at the bottom of the page
+
+        <details>
+        <summary>Porduct Detail / Shopping Bag / Checkout</summary>
+
+        ![Product Detail](docs/product_details.jpg)
+
+        ![Shopping Bag](docs/shopping_bag.jpg)
+
+        ![Checkout](docs/checkout.jpg)
+        </details>
+
     -   **Result:** ***PASSED***
 
 3.  As a consumer i want to see the total value of my shopping bag including possible shipping fee
-    -   **Testing:**
-    -   **Result:** ***PASSED***
+    -   **Testing:** through the purchasing process the **Shopping Bag** page and the **Checkout Page** give information about the **Sub-/Grand-Total** values and about the possible **Shipping fee**. The website provide **Free Shipping** if the order value is more than $50, otherwise the shipping fee is calculated as 10% of the order value.
+    -   **Result:** all the above mentioned features were tested without any failure ***PASSED***
 
 4.  As a consumer i want to have a fast and safe way to pay for the ordered products 
-    -   **Testing:**
-    -   **Result:** ***PASSED***
+    -   **Testing:** 
+        - Consumers can pay with credit card and the payment goes via Stripe payments. 
+        - The stripe setup is based on a test environment. A consumer can fill in the number 4242 4242 4242 4242  to make a succesful payment. 
+        - A Stripe webhook is implemented for extra secure payments. 
+        - The consumer has to fill in personal information and delivery information. 
+            - The required fields are full name, email address, phone number, country, town or city and street address 1. 
+            - The email has a validator where someone has to use a @. 
+            - The country field is a dropdown with all countries. 
+    -   **Result:** The above mentioned payment system has been tested several times, since the beginning I had problem with that (problem description and solution can be found in this Testing document in an other chapter) ***PASSED***
 
 5.  As a consumer i want to have continous feedback about my selected operations on the website.
-    -   **Testing:**
+    -   **Testing:** The consumer contonpusly get a toast message as a feedback the success of the selected operation. Type of Toasts: Error / Info / Success / Warning
+    The attached image shows an example of a **Success Toast**. The Toast also contains the message what was success. Tis functionality was always a focus point of the test
+        <details>
+        <summary>Success Toasts</summary>
+
+        ![Toast Success 1](docs/test/toast_success_1.jpg)     
+        ![Toast Success 2](docs/test/toast_success_2.jpg)     
+    </details>
+
     -   **Result:** ***PASSED***
 
 6.  As a consumer i want to have confirmation e-mail about my purchase with order number.
-    -   **Testing:**
+    -   **Testing:** 
+        - When the purchase is succeeded the consumer is redirected to the checkout success page. On the page there is an order summary and it mentions that the consumer will receive an email confirmation. 
+        - The email is connected with gmail and when the purchase is made, an automatic confirmation is sent from **ci.gergely.vig@gmail.com**
+
+            <details>
+            <summary>Confirmation Email</summary>
+
+            ![Confirmation Email](docs/test/order_contact.jpg)
+            </details>
+
     -   **Result:** ***PASSED***
 
 7.  As a consumer i want to have the possibility to create my own account to save my profile information and see my previous orders.
-    -   **Testing:**
+    -   **Testing:** The consumer can create her/his own account by signing up. Personal information, delivery information and the order history are visible on the Profile page. The consumer can change the delivery information by updating the details and the consumer can change the password or manage email
+    
     -   **Result:** ***PASSED***
 
 
@@ -135,25 +187,25 @@
     -   **Result:** ***PASSED***
 
 5.  As a returning consumer i want to see others people feedback about the product I also want to be able to write my opinion about the product 
-    -   **Testing:**
+    -   **Testing:** 
     -   **Result:** ***PASSED***
 
 
 ### **1-4 Administrator Goals**
 1.  As an administartor i want to have control over the produts at the webshop. I want to be able to execute CRUD operations
     -   Create
-        -   **Testing:**
+        -   **Testing:** 
         -   **Result:** ***PASSED***
 
     -   Read
-        -   **Testing:**
+        -   **Testing:** 
         -   **Result:** ***PASSED***
 
     -   Update
-        -   **Testing:**
+        -   **Testing:** 
         -   **Result:** ***PASSED***
 
-    -   Delete
+    -   Delete 
         -   **Testing:**
         -   **Result:** ***PASSED***
 
