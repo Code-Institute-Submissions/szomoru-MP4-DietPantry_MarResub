@@ -17,12 +17,11 @@
 -   [2.5 Lighthouse](#2-5-lighthouse)
 
 [3. **Other Tests performed**](#3-other-tests-performed)
--   [3.1 Flake8](#3-1-flake8)
--   [3.2 Color Contrast Check](#3-2-color-contrast-check)
+-   [3.1 Color Contrast Check](#3-1-color-contrast-check)
 
 [4. **Bugs during development**](#4-bugs-during-development)
 -   [4.1 E-mail sending](#4-1-email-sending)
--   [4.2 Am I rsponsive](#4-2-am-i-responsive)
+-   [4.2 Am I responsive](#4-2-am-i-responsive)
 
 
 
@@ -165,47 +164,90 @@
 
 7.  As a consumer i want to have the possibility to create my own account to save my profile information and see my previous orders.
     -   **Testing:** The consumer can create her/his own account by signing up. Personal information, delivery information and the order history are visible on the Profile page. The consumer can change the delivery information by updating the details and the consumer can change the password or manage email
-    
+
     -   **Result:** ***PASSED***
 
 
 ### **1-3 Returning Consumer Goals (Registered)**
 1.  As a returning consumer I have the same goals than the not returning consumers and more
-    -   **Testing:**
-    -   **Result:** ***PASSED***
+    -   **Testing:** All the functionality is accessable for a registered consumer as the not registered consumer. The registered consumer has actually more features in their account. They can see an extra menupoint called **Diet Library** in the header section. The registerd consumer also has the possibility to **leave a review** or **see the ordere history** or **add products to favourites**
+
+    -   **Result:** authorization has been tested and worked correctly ***PASSED***
 
 2.  As a returning customer I want to easily login/logout to my previously created account. I also want to see my order history
-    -   **Testing:**
+    -   **Testing:** The returning consumer can login and logout through the link under the profile icon in the navbar. The consumer has a double check for logging out.
     -   **Result:** ***PASSED***
 
 3.  As a returning consumer i want to be able to create my own favourite products database and add/remove products to that. 
-    -   **Testing:**
+    -   **Testing:** As a registered returning consumer has the permission to add a product into the Favourites. This can happen on the **Products page** by clicking on the **Add to Favourites** button on the product card or on the **Product Detailed Page** b ya also clicking on the **Add to Favourites** button.
     -   **Result:** ***PASSED***
 
 4.  As a returning consumer i want to have full control over my password, I want to be able to reset or change it.
-    -   **Testing:**
+    -   **Testing:** The password for a registered returning consumer can be changed by clicking the button on the profile page or by the login page.
     -   **Result:** ***PASSED***
 
 5.  As a returning consumer i want to see others people feedback about the product I also want to be able to write my opinion about the product 
-    -   **Testing:** 
+    -   **Testing:** As a registered returning consumer has the authorization to leave review for a product on the product detail page. 
     -   **Result:** ***PASSED***
+
+    ***All related Returning Consumer Images:***
+
+    <details>
+    <summary>Not Registered User Navbar</summary>
+
+    ![Not Registered User Navbar](docs/test/not_registered_user_navbar.jpg)
+    </details>
+
+    <details>
+    <summary>Registered User Navbar</summary>
+
+    ![Registered User Navbar](docs/test/registered_user_navbar.jpg)
+    </details>
+
+    <details>
+    <summary>Not Registered User Product Detail Page</summary>
+
+    ![Not Registered User Product Detail Page](docs/test/not_registered_user_product_detail.jpg)
+    </details>
+
+    <details>
+    <summary>Registered User Product Detail Page</summary>
+
+    ![Registered User Product Detail Page](docs/test/registered_user_product_detail.jpg)
+    </details>
+
+    <details>
+    <summary>Not Registered User Product Detail Page - Review</summary>
+
+    ![Not Registered User Product Detail Page - Review](docs/test/not_registered_user_product_detail_review.jpg)
+    </details>
+
+    <details>
+    <summary>Registered User Product Detail Page - Review</summary>
+
+    ![Registered User Product Detail Page - Review](docs/test/registered_user_product_detail_review.jpg)
+    </details>
 
 
 ### **1-4 Administrator Goals**
-1.  As an administartor i want to have control over the produts at the webshop. I want to be able to execute CRUD operations
-    -   Create
-        -   **Testing:** 
-        -   **Result:** ***PASSED***
+1.  As an administartor i want to have control over the produts at the webshop. I want to be able to execute CRUD operation
+    -   **Testing:** It is only the Admin who has the possibility to add product / modify product or even delete a product. Under the my profile menu it is only the admin who can see the Product management feature. By selecting it the Admin is able to uplad a new produc into the database. Under the Admin accountit is only the Admin who can dee the Delete and Edit buttons on the individual products. The normal users are not authorised to see them.
+    -   **Result:** All the Create / Update and Delete functionality were tested and worked as it should be ***PASSED*** 
 
-    -   Read
-        -   **Testing:** 
-        -   **Result:** ***PASSED***
+        <details>
+        <summary>Admin Navbar</summary>
 
-    -   Update
-        -   **Testing:** 
-        -   **Result:** ***PASSED***
+        ![Admin Navbar](docs/test/admin_navbar.jpg)
+        </details>
 
-    -   Delete 
-        -   **Testing:**
-        -   **Result:** ***PASSED***
+        <details>
+        <summary>Admin Product Detail Page</summary>
 
+        ![Admin Product Detail Page](docs/test/admin_product_detail.jpg)
+        </details>
+
+        <details>
+        <summary>Admin Product Management Page</summary>
+
+        ![Admin Product Management Page](docs/test/admin_product_management.jpg)
+        </details>
