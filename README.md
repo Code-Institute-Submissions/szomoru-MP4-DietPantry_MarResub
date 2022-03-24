@@ -181,8 +181,8 @@ This website is a fictional webshop for people who are following different type 
 
 ### **1-7 Wireframes**
 
-    There were several design changes during the development process, but the final site looks very similar with the wireframe. The wireframe does not contain any colorscheme, because at that time it was still not decided what colors i am going to use (Note: after a failed submit the colorscheme has been changed for better contrast ratio -more in the TESTING.md ). 
-    On the following pictures the wireframes are introduced by htmls. Each image contain a desktop and phone size wireframe.  
+There were several design changes during the development process, but the final site looks very similar with the wireframe. The wireframe does not contain any colorscheme, because at that time it was still not decided what colors i am going to use (Note: after a failed submit the colorscheme has been changed for better contrast ratio -more in the TESTING.md ). 
+On the following pictures the wireframes are introduced by htmls. Each image contain a desktop and phone size wireframe.  
 
 -   [index.html WireFrame](docs/wireframe/index.png)
 
