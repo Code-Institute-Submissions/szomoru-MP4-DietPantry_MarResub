@@ -89,14 +89,14 @@ This website is a fictional webshop for people who are following different type 
     6.  As a consumer i want to have confirmation e-mail about my purchase with order number.
     7.  As a consumer i want to have the possibility to create my own account to save my profile information and see my previous orders.
 
--   #### **1.5.4 Returning consumer goals**
+-   #### **1.5.3 Returning consumer goals**
     1.  As a returning consumer I have the same goals than the not returning consumers and more  
     2.  As a returning customer I want to easily login/logout to my previously created account. I also want to see my order history
     3.  As a returning consumer i want to be able to create my own favourite products database and add/remove products to that. 
     4.  As a returning consumer i want to have full control over my password, I want to be able to reset or change it.
     5.  As a returning consumer i want to see others people feedback about the product I also want to be able to write my opinion about the product 
 
--   #### **1.5.5 Administrator goals**
+-   #### **1.5.4 Administrator goals**
     1.  As an administartor i want to have control over the produts at the webshop. I want to be able to execute CRUD operations
         -   Create
         -   Read
@@ -129,8 +129,22 @@ This website is a fictional webshop for people who are following different type 
     -   #### Typography
         There are 2 main font styles used through the webshop. The fonts were selected from the Google Font website. 
         <ul>
-            <li><strong>Sacramento:</strong> This font is used only at the logo of the website. The reason is it is a handwriting style from the 50's - 60's. The reason to have that style for the logo that it gives more private feeling. It is needed since the name of the webshop refers to fill up someones pantry, which is already very private. </li>
-            <li><strong>Lato:</strong> This font is used the rest of the website. It is easy to read and longer texts are also look very good with this font. It provides stabilty and seriousness feeling. The designer of the font is <i>Łukasz Dziedzic</i>. He says about his design: <i>“Male and female, serious but friendly. With the feeling of the Summer ...”</i>  </li>
+        <li>
+        <details>
+        <summary><strong>Sacramento</strong></summary>
+
+        ![Product Page](docs/sacramento.jpg)
+        
+        </details>
+            This font is used only at the logo of the website. The reason is it is a handwriting style from the 50's - 60's. The reason to have that style for the logo that it gives more private feeling. It is needed since the name of the webshop refers to fill up someones pantry, which is already very private. </li>
+        <li>
+        <details>
+        <summary><strong>Lato</strong></summary>
+
+        ![Product Page](docs/lato.jpg)
+        
+        </details>
+        This font is used the rest of the website. It is easy to read and longer texts are also look very good with this font. It provides stabilty and seriousness feeling. The designer of the font is <i>Łukasz Dziedzic</i>. He says about his design: <i>“Male and female, serious but friendly. With the feeling of the Summer ...”</i>  </li>
             <li><strong>San-serif:</strong> This font is used as a Web safe font if the other 2 main fonts cannot be loaded some reason.</li>
         </ul>
 
