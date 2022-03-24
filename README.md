@@ -213,12 +213,31 @@ This website is a fictional webshop for people who are following different type 
     
     </details>
 
+    -   The product page contains all items the shop has to offer
+    -   All **categories** are displayed on the right site of the page, so that users can easily navigate through the categories.
+    -   The items can be **sorted** by name A-Z, Z-A, price from high to low and price from low to high
+    -   There is a **back to top button**, where people can click on the link to go back to the top of the page. 
+    -   There is a button where the user can **add the item to the shopping bag**.
+    -   When the user  puts the item in the bag there will be a toast success message.
+    -   When the user puts the item in the bag, the shopping bag in the navbar will show the number of items that are in the shopping bag.
+
 3.  <details>
+
     <summary>Product Detail Page</summary>
 
     ![Product Detail Page](docs/product_details.jpg)
     
     </details>
+
+    -   **The product detail page shows information about that specific item**, the information includes; name, image, the price and the product description.
+    -   A user can **choose the quantity** of the product. The product quantity can be between 1 and 99 items. 
+    -   There is a button where the user can **add the item to the shopping bag**.
+    -   There is as an other button where the user can **add to favourites** the actual product. This feature **available only for logged in** users.
+    -   When the user  puts the item in the bag there will be a toast success message.
+    -   When the user puts the item in the bag, the shopping bag in the navbar will show the number of items that are in the shopping bag.
+    -   There is a **krrp shopping** link that redirects to the product page. 
+    -   There is also a **review** section at the bottom. The user can **add a review** is logged into its account. right under that there is the section with **other users reviews**
+     
 
 4.  <details>
     <summary>Shopping Bag Page</summary>
@@ -227,12 +246,34 @@ This website is a fictional webshop for people who are following different type 
     
     </details>
 
+    -   **The shopping bag page is available for logged in users and guests.** Purchases can be made by both of them. shopping bag page 
+    -   Gives **an overview of all items** that are in the shopping bag, the overview information includes; image, name, size, quantity, price and subtotal.
+    -   users  can **update the quantity** of the items they have.
+    -   users  can **delete items** from their order.
+    -   There is an **overview of the total price, the delivery costs and the grant total** of the order.
+    -   There is a button with **‘keep shopping’** that links to the product page. 
+    -   There is a button with **‘go to checkout’** to continue the purchase
+
 5.  <details>
     <summary>Checkout Page</summary>
 
     ![Checkout Page](docs/checkout.jpg)
     
     </details>
+
+    -   The **order summary** gives information about the item, this information includes; name, size, price, total, delivery costs and grant total. 
+    -   There is an option to **login with an account**, where the personal and delivery information already exists to continue the payment process quickly. 
+    -   **The checkout form** to continue the payment. The form asks for the following information: full name, email, phone number, country, postal code, town or city and  street address 1 - all these input fields must be valid. The country field is an input where users can scroll to a list to choose the country.
+    -   At the end of the checkout form there is an option to **save** the delivery information to an account. This function only shows when the user is authenticated.
+    -   The user has to fill in their information about the card number. The Stripe functionality is in testing mode, the credit card number **4242 4242 4242 4242** will lead to a successful payment. expiration date, CVC and ZIP can be made up yourself.
+    -   A **webhook** is used for security when the order is processed, even in the case when the payment process is interrupted.
+    -   There is a **button to go back to the shopping bag page.** The user can go back to the shopping bag page to adjust items in the bag.
+    -   There is a button to **complete the order**.
+    -   When the user clicks on the complete the order button, there is a little **loading overlay**. The user is directed to the checkout success page after the overlay. 
+    -   **When the order is completed:**
+        - There is a redirect to the checkout success page.
+        - A confirmation email is sent to the user’s mail.
+        - A toast message ‘completed’ shows to ensure the user that the order is successfully completed.
 
 6.  <details>
     <summary>Checkout Success (Thank You) Page</summary>
@@ -241,12 +282,21 @@ This website is a fictional webshop for people who are following different type 
     
     </details>
 
+    -   Contains a **thank you message**.
+    -   Includes information about the **order summary**. The order summary consists of information about the date, order number, products, delivery information and billing information. 
+    -   There is a button to go back to the product page.
+
 7.  <details>
     <summary>Profile Page</summary>
 
     ![Profile Page](docs/profile.jpg)
     
     </details>
+
+    -   The account page is only accessible for users who have an account. 
+    -   The page contains a **personal info section** (username, email). The user can change the password and edit their email. 
+    -   There is a shipping **info section** (country, postal code, town/city, street address 1 and street address 2. Users can **edit this information** also. 
+    -   There is an **order history** section (order number, date of order, items and total) 
 
 8.  <details>
     <summary>Diet Page</summary>
@@ -255,12 +305,33 @@ This website is a fictional webshop for people who are following different type 
     
     </details>
 
+    -   This page is **available only for logged in** users. These pages about the **different diet types** are devided into 4 main sections
+    -   Each section **contains a link to the source** at the bottom left corner of the card
+
 9.  <details>
     <summary>Favourites Page</summary>
 
     ![Favourites Page](docs/favourites.jpg)
     
     </details>
+
+    
+    -   This page is **available only for logged in** users. On this page the user can see **only those products**, where the user has clicked on the **add to favourites** button. 
+    -   The user has the possibility to remove products from the favourites by clicking on the  **remove from favourites** button
+
+10. Django-Allauth features 
+    -   **Sign up**
+        -   Users can create a new account by filling in a from where the user have to fillin a email, username, password and password confirmation. If the info already exists there will be a message that he/she already has an account. The user can submit the form when the data is new. A verification email is sent to the user.
+    -   **Login**
+        -   Users can login with their username ans password. There is also a link to change the password, if the user is forgotten it. 
+    -   **Forgot password**
+        -   A user can reset their password. 
+    -   **Logout** 
+        -   The user can logout by clicking the logout link. After clicking the link there wil a confirmation if the user is sure to logout. 
+
+11. Error pages 
+    -   There are custom error handling pages with short information about the error. The errors are displayed in the style of the website. 
+    -   The following errors are included: 404 and 500.
     
 ## Possible Future Features
 
