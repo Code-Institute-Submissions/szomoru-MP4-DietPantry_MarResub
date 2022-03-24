@@ -184,21 +184,21 @@ This website is a fictional webshop for people who are following different type 
     There were several design changes during the development process, but the final site looks very similar with the wireframe. The wireframe does not contain any colorscheme, because at that time it was still not decided what colors i am going to use (Note: after a failed submit the colorscheme has been changed for better contrast ratio -more in the TESTING.md ). 
     On the following pictures the wireframes are introduced by htmls. Each image contain a desktop and phone size wireframe.  
 
-    -   [index.html WireFrame](docs/wireframe/index.png)
+-   [index.html WireFrame](docs/wireframe/index.png)
 
-    -   [products.html WireFrame](docs/wireframe/products.png) 
+-   [products.html WireFrame](docs/wireframe/products.png) 
 
-    -   [product_detail.html WireFrame](docs/wireframe/productdetail.png)
+-   [product_detail.html WireFrame](docs/wireframe/productdetail.png)
 
-    -   [profile.html WireFrame](c/wireframe/profile.png) 
+-   [profile.html WireFrame](c/wireframe/profile.png) 
 
-    -   [bag.html WireFrame](docs/wireframe/shoppingbag.png) 
+-   [bag.html WireFrame](docs/wireframe/shoppingbag.png) 
 
-    -   [checkout.html WireFrame](docs/wireframe/checkout.png) 
+-   [checkout.html WireFrame](docs/wireframe/checkout.png) 
 
-    -   [checkout_success.html WireFrame](docs/wireframe/thankyou.png) 
+-   [checkout_success.html WireFrame](docs/wireframe/thankyou.png) 
 
-    -   [keto.html / lowcarb.html /  highprotein.html / mediterranean.html WireFrame](docs/wireframe/dietlibrary.png)
+-   [keto.html / lowcarb.html /  highprotein.html / mediterranean.html WireFrame](docs/wireframe/dietlibrary.png)
 
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
