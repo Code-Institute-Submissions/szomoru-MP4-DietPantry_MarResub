@@ -1,7 +1,5 @@
 # The Diet Pantry
 
-<span id="breaktop"></span>
-
 <h1 align="center"><img src="docs/amiresponsive_tiny.jpg"/></h1>
 
 Welcome to My 4th milestone project at Code Institute. The Diet Pantry website is more or less the end of a long long and hard journey in the world of Coding. The purpose of this project 
@@ -13,38 +11,65 @@ This website is a fictional webshop for people who are following different type 
 
 [Github link](https://github.com/szomoru/MP4-DietPantry) 
 
+<span id="breaktop"></span>
 
 ## Table of Contents
 
 [1. **UX**](#1-ux)
-+   [1.1 Project Goals](#1.1-project-goals)
-+   [1.2 Business Goals](#1.2-business-goals)
-+   [1.3 Visitor Goals](#1.3-visitor-goals)
-+   [1.4 Target Audience](#1.4-target-audience)
-+   [1.5 User Stories](#1.5-user-stories)
-    +   [1.5.1 Visitor Goals](#1.5.1-visitor-goals)
-    +   [1.5.2 Consumer Goals (Unregistered)](#1.5.2-consumer-goals)
-    +   [1.5.3 Returning Consumer Goals (Registered)](#1.5.3-returning-consumer-goals)
-    +   [1.5.4 Administrator Goals](#1.5.4-administrator-goals)
+-   [1.1 Project Goals](#1-1-project-goals)
+-   [1.2 Business Goals](#1-2-business-goals)
+-   [1.3 Visitor Goals](#1-3-visitor-goals)
+-   [1.4 Target Audience](#1-4-target-audience)
+-   [1.5 User Stories](#1-5-user-stories)
+    -   [1.5.1 Visitor Goals](#1-5-1-visitor-goals)
+    -   [1.5.2 Consumer Goals (Unregistered)](#1-5-2-consumer-goals)
+    -   [1.5.3 Returning Consumer Goals (Registered)](#1-5-3-returning-consumer-goals)
+    -   [1.5.4 Administrator Goals](#1-5-4-administrator-goals)
+-   [1.6 Design](#1-6-design)
+    -   [1.5.1 Visitor Goals](#1-6-1-visitor-goals)
+    -   [1.5.2 Consumer Goals (Unregistered)](#1-6-2-consumer-goals)
+    -   [1.5.3 Returning Consumer Goals (Registered)](#1-6-3-returning-consumer-goals)
+-   [1.7 Wireframes](#1-7-wireframes)
 
 [2. **Features**](#2-features)
+-   [2.1 Existing Features](#2-1-existing-features)
+-   [2.2 Possible Future Features](#2-2-possible-future-features)
 
 [3. **Database Design**](#3-database-design)
 
 [4. **Technologies Used**](#4-technologies-used)
+-   [4.1 Languagess](#4-1-languages)
+-   [4.2 Frameworks](#4-2-frameworks)
+-   [4.3 Libraries](#4-3-libraries)
+-   [4.4 Editors](#4-4-editors)
+-   [4.5 Tools](#4-5-tools)
+-   [4.6 Database Management](#4-6-database-management)
+-   [4.7 Deployment Platform(s)](#4-7-deployment-platforms)
+-   [4.8 Testing Tools](#4-8-testing-tools)
 
 [5. **Testing**](#5-testing)
 
 [6. **Deployment**](#6-deployment)
+-   [6.1 Requirements for Deployment](#6-1-requirements-for-deployment)
+-   [6.2 How to Fork it](#6-2-how-to-fork-it)
+-   [6.3 Making a Local Clone](#6-3-making-a-local-clone)
+-   [6.4 Heroku Deployment](#6-4-heroku-deployment)
+-   [6.5 AWS S3 Bucket setup](#6-5-aws-s3-bucket-setup)
+-   [6.6 AWS IAM (Identity and Access Management) setup](#6-6-aws-iam-identity-and-access-management-setup)
+-   [6.7 Connecting Heroku to AWS S3](#6-7-connecting-heroku-to-aws-s3)
 
 [7. **Credits**](#7-credits)
+-   [7.1 Code](#7-1-code)
+-   [7.2 Content](#7-2-content)
+-   [7.3 Media](#7-3-media)
+-   [7.4 Acknowledgements](#7-4-acknowledgements)
 
 
 ## 1. **UX**
 
 <hr>
 
-### 1.1 Project goals
+### **1-1 Project goals**
 -   Making a full-stack site based around business logic used to control a centrally-owned database. 
 -   The site provides an authentication mechanism and provides access to the site’s data based on the dataset. 
 -   Making a full-stack site that uses HTML, CSS, JavaScript, Python + Django.
@@ -52,24 +77,24 @@ This website is a fictional webshop for people who are following different type 
 -   Creating a website that uses Stripe payments 
 -   Creating a website that serves as a webshop to sell healthy food products   
 
-### **1.2 Business goals**
+### **1-2 Business goals**
 -   Creating a secure and professional e-commerce website. 
 -   Provide users acces to good quality healthy cooking/baking ingredients used in different type of diets 
 -   Makes profit with selling healthy food products 
 -   Makes healthy lifestyle and healthier food selection accessible to everyone
 
-### **1.3 Visitor goals**
+### **1-3 Visitor goals**
 -   Get inspired beeing open minded to different diets and changing to a healthier food selection 
 -   Safely purchase products on the webshop
 
-### **1.4 Target audience**
+### **1-4 Target audience**
 -   Everyone who has been following, following or planning to follow a healthier diet.
 -   Everyone who is interested to eat different
 -   Everyone who has to eat different because of some health issues (eg Diabetes, High Blood Pressure, Overweight)
 
-### **1.5 User stories**
+### **1-5 User stories**
 
--   #### **1.5.1 Visitor goals**
+-   #### **1-5-1 Visitor goals**
     1.  As a visitor, I want to access the website from any device (PC / notebook / tablet / mobile )
     2.  As a visitor, I want to be able navigtae through the website easily
     3.  As a visitor i want to be able to get more background information about the company through socail media accounts
@@ -80,7 +105,7 @@ This website is a fictional webshop for people who are following different type 
     8.  As a visitor i want to be able to get more information about the product (product description, price, image about the product ...)
     9.  As a visitor i want to be able to see what other peoples opinion about the product 
 
--   #### **1.5.2 Consumer goals**
+-   #### **1-5-2 Consumer goals**
     1.  As a consumer i want to able to fill up a virtual shopping bag and purchasing the content of it.
     2.  As a consumer i want to have control over the content of the shopping bag until the very last step of purchasing (payment)
     3.  As a consumer i want to see the total value of my shopping bag including possible shipping fee
@@ -89,70 +114,72 @@ This website is a fictional webshop for people who are following different type 
     6.  As a consumer i want to have confirmation e-mail about my purchase with order number.
     7.  As a consumer i want to have the possibility to create my own account to save my profile information and see my previous orders.
 
--   #### **1.5.3 Returning consumer goals**
+-   #### **1-5-3 Returning consumer goals**
     1.  As a returning consumer I have the same goals than the not returning consumers and more  
     2.  As a returning customer I want to easily login/logout to my previously created account. I also want to see my order history
     3.  As a returning consumer i want to be able to create my own favourite products database and add/remove products to that. 
     4.  As a returning consumer i want to have full control over my password, I want to be able to reset or change it.
     5.  As a returning consumer i want to see others people feedback about the product I also want to be able to write my opinion about the product 
 
--   #### **1.5.4 Administrator goals**
+-   #### **1-5-4 Administrator goals**
     1.  As an administartor i want to have control over the produts at the webshop. I want to be able to execute CRUD operations
         -   Create
         -   Read
         -   Update
         -   Delete
 
--   ### Design
+### **1-6 Design**
 
-    -   #### Colour Scheme
-        There are used 2 main color groups on the website. Both groups contain 3 color codes:
+-   #### **1-6-1 Colour Scheme**
+    There are used 2 main color groups on the website. Both groups contain 3 color codes:
 
-        <details>
-        <summary>Primary colors</summary>
+    <details>
+    <summary>Primary colors</summary>
 
-        ![Primary colors](docs/primary_colors.jpg)
+    ![Primary colors](docs/primary_colors.jpg)
 
-        </details>
+    </details>
 
-        <details>
-        <summary>Seconary colors</summary>
+    <details>
+    <summary>Seconary colors</summary>
 
-        ![Secondary colors](docs/secondary_colors.jpg)   
+    ![Secondary colors](docs/secondary_colors.jpg)   
 
-        </details>    
+    </details>    
 
-        Both color groups are used either background or font color. And there are also other blight colors are used on dark background to improve color contrast ratio.
+    Both color groups are used either background or font color. And there are also other blight colors are used on dark background to improve color contrast ratio.
             
         
 
-    -   #### Typography
-        There are 2 main font styles used through the webshop. The fonts were selected from the Google Font website. 
-        <ul>
-        <li>
-        <details>
-        <summary><strong>Sacramento</strong></summary>
+-   #### **1-6-2 Typography**
+    There are 2 main font styles used through the webshop. The fonts were selected from the Google Font website. 
+    <ul>
+    <li>
+    <details>
+    <summary><strong>Sacramento</strong></summary>
 
-        ![Product Page](docs/sacramento.jpg)
+    ![Product Page](docs/sacramento.jpg)
         
-        </details>
-            This font is used only at the logo of the website. The reason is it is a handwriting style from the 50's - 60's. The reason to have that style for the logo that it gives more private feeling. It is needed since the name of the webshop refers to fill up someones pantry, which is already very private. </li>
-        <li>
-        <details>
-        <summary><strong>Lato</strong></summary>
+    </details>
+        This font is used only at the logo of the website. The reason is it is a handwriting style from the 50's - 60's. The reason to have that style for the logo that it gives more private feeling. It is needed since the name of the webshop refers to fill up someones pantry, which is already very private. 
+    </li>
+    <li>
+    <details>
+    <summary><strong>Lato</strong></summary>
 
-        ![Product Page](docs/lato.jpg)
+    ![Product Page](docs/lato.jpg)
         
-        </details>
-        This font is used the rest of the website. It is easy to read and longer texts are also look very good with this font. It provides stabilty and seriousness feeling. The designer of the font is <i>Łukasz Dziedzic</i>. He says about his design: <i>“Male and female, serious but friendly. With the feeling of the Summer ...”</i>  </li>
-            <li><strong>San-serif:</strong> This font is used as a Web safe font if the other 2 main fonts cannot be loaded some reason.</li>
-        </ul>
+    </details>
+        This font is used the rest of the website. It is easy to read and longer texts are also look very good with this font. It provides stabilty and seriousness feeling. The designer of the font is <i>Łukasz Dziedzic</i>. He says about his design: <i>“Male and female, serious but friendly. With the feeling of the Summer ...”
+    </i>  
+    <li><strong>San-serif:</strong> This font is used as a Web safe font if the other 2 main fonts cannot be loaded some reason.</li>
+    </ul>
 
     -   #### Imagery
         On the main page there are 4 photos which were supposed to promote healthy feeling and happiness. The 4 pictures were selected by symbolise the mission of the webshop creator. 
         Further images throught the website are only product images. The product imaes are straightforward and most cases comming from the product manufacturer database. 
 
--   ### Wireframes
+### **1-7 Wireframes**
 
     There were several design changes during the development process, but the final site looks very similar with the wireframe. The wireframe does not contain any colorscheme, because at that time it was still not decided what colors i am going to use (Note: after a failed submit the colorscheme has been changed for better contrast ratio -more in the TESTING.md ). 
     On the following pictures the wireframes are introduced by htmls. Each image contain a desktop and phone size wireframe.  
@@ -181,7 +208,7 @@ This website is a fictional webshop for people who are following different type 
 
 <hr>
  
- ## Existing Features
+## 2-1 Existing Features
 
 ### Features common on every page
 1.  <details>
@@ -347,7 +374,7 @@ This website is a fictional webshop for people who are following different type 
     -   There are custom error handling pages with short information about the error. The errors are displayed in the style of the website. 
     -   The following errors are included: 404 and 500.
     
-## Possible Future Features
+## 2-2 Possible Future Features
 
 
 <div align="right">
@@ -372,80 +399,80 @@ There were used relational databases for this project. During development phase 
 
 <hr>
 
--   ### Languages ###
-    -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
-        -   HTML5 provides the structure and the content of my website
-    -   [CSS3](https://en.wikipedia.org/wiki/CSS)
-        -   CSS3 provides the style of the HTML5 elements
-    -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-        -   JS provides the interactive part
-    -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-        -   The backend of the website is provided by Python
-    -   [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine))
-        -   Jinja is a web template language for python
+### 4-1 Languages ###
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+    -   HTML5 provides the structure and the content of my website
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
+    -   CSS3 provides the style of the HTML5 elements
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    -   JS provides the interactive part
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    -   The backend of the website is provided by Python
+-   [Jinja](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+    -   Jinja is a web template language for python
 
 
--   ### Frameworks ###
-    -   [Django](https://www.djangoproject.com/)
-        -   Django is used as Python framework in this project
+### 4-2 Frameworks ###
+-   [Django](https://www.djangoproject.com/)
+    -   Django is used as Python framework in this project
 
 
--   ### Libraries ###
-    -   [Bootstrap CSS Framework](https://getbootstrap.com/)
-        -   One of the largest pre-built library of HTML and CSS components. It was used every section of the webpage just like buttons or navigation ...
-    -   [Font Awesome](https://fontawesome.com/)
-        -   This library is used for getting icons
-    -   [Google Fonts](https://fonts.google.com/)
-        -   Font library
-    -   [JQuery](https://jqueryui.com/)
-        -   JavaScript library. MAinly used to simplify DOM manipulation and JS simplification
+### 4-3 Libraries ###
+-   [Bootstrap CSS Framework](https://getbootstrap.com/)
+    -   One of the largest pre-built library of HTML and CSS components. It was used every section of the webpage just like buttons or navigation ...
+-   [Font Awesome](https://fontawesome.com/)
+    -   This library is used for getting icons
+-   [Google Fonts](https://fonts.google.com/)
+    -   Font library
+-   [JQuery](https://jqueryui.com/)
+    -   JavaScript library. MAinly used to simplify DOM manipulation and JS simplification
 
 
--   ### Editors ###
-    -   [GitHub](https://github.com/)
-        -   Remote code repository. It was use for source control 
-    -   [dbDiagram](https://dbdiagram.io/)
-        -   Plan and visualize database structures
-    -   [Balsamiq](https://balsamiq.com/)
-        -   Wireframe creator for visual testing
+### 4-4 Editors ###
+-   [GitHub](https://github.com/)
+    -   Remote code repository. It was use for source control 
+-   [dbDiagram](https://dbdiagram.io/)
+    -   Plan and visualize database structures
+-   [Balsamiq](https://balsamiq.com/)
+    -   Wireframe creator for visual testing
 
 
--   ### Tools ###
-    -   [TinyPNG](https://tinypng.com/)
-        -   Minimize image file size to deacrease the loading time, so maximize the webpage speed
-    -   [Autoprefixer](https://autoprefixer.github.io/)
-        -   Vendor prefixes to CSS rules 
-    -   [Am I Responsive](http://ami.responsivedesign.is/)
-        -   Creates demo views for ewsponsive design. Readme hero image was created by it.
-    -   [Lambdatest](https://www.lambdatest.com/)
-        -   Check website response across device types
+### 4-5 Tools ###
+-   [TinyPNG](https://tinypng.com/)
+    -   Minimize image file size to deacrease the loading time, so maximize the webpage speed
+-   [Autoprefixer](https://autoprefixer.github.io/)
+    -   Vendor prefixes to CSS rules 
+-   [Am I Responsive](http://ami.responsivedesign.is/)
+    -   Creates demo views for ewsponsive design. Readme hero image was created by it.
+-   [Lambdatest](https://www.lambdatest.com/)
+    -   Check website response across device types
 
--   ### Database Management ###
-    -   [SQLite3](https://www.sqlite.org/)
-        -   It was used as the Development Database
-    -   [PostgreSQL](https://www.postgresql.org/)
-        -   It was used as the production Database
+### 4-6 Database Management ###
+-   [SQLite3](https://www.sqlite.org/)
+    -   It was used as the Development Database
+-   [PostgreSQL](https://www.postgresql.org/)
+    -   It was used as the production Database
 
 
--   ### Deployment platform(s) ###
-    -   [Heroku](https://dashboard.heroku.com/)
+### 4-7 Deployment platform(s) ###
+-   [Heroku](https://dashboard.heroku.com/)
         -   Remote hosting platform, it was used to hos my project
-    -   [Amazon AWS](https://aws.amazon.com/)
+-   [Amazon AWS](https://aws.amazon.com/)
         -   AWS Amazon is used to store static and media files.
 
--   ### Testing Tools ###
-    -   [Chrome DevTool](https://developer.chrome.com/docs/devtools/open/)
-        -   was used to check site responsiveness, and as a general debugger
-    -   [W3C Markup Validator](https://validator.w3.org/)
-        -   This Validator is used to check if there is any eror in the HTML5 code
-    -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
-        -   This validator is used to check if there is any error in the CSS3 code
-    -   [JShint](https://jshint.com/)
-        -   JShint validator can find errors in JavaScript codes
-    -   [PEP8](http://pep8online.com/) 
+### 4-8 Testing Tools ###
+-   [Chrome DevTool](https://developer.chrome.com/docs/devtools/open/)
+    -   was used to check site responsiveness, and as a general debugger
+-   [W3C Markup Validator](https://validator.w3.org/)
+    -   This Validator is used to check if there is any eror in the HTML5 code
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    -   This validator is used to check if there is any error in the CSS3 code
+-   [JShint](https://jshint.com/)
+    -   JShint validator can find errors in JavaScript codes
+-   [PEP8](http://pep8online.com/) 
         -   was used to validate the python syntax.
-    -   [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-        -   was used to check the site's Performance, Accessibility, Best Practices, and SEO.
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+    -   was used to check the site's Performance, Accessibility, Best Practices, and SEO.
 
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
@@ -457,7 +484,7 @@ There were used relational databases for this project. During development phase 
 
 You can find the detailed testing description by clicking on the link below:
 
-[TESTING.MD]()
+[TESTING.MD](TESTING.md)
 
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
@@ -467,20 +494,48 @@ You can find the detailed testing description by clicking on the link below:
 
 <hr>
 
--   ### Requirements for Deployment
+### **6-1 Requirements for Deployment**
 
-    * Python3
-    * GitHub account
-    * Heroku account
-    * Stripe account
-    * AWS Amazon account
-    * An emailaccount preferably Gmail
-
-
-### Initial Deployment
+* Python3
+* GitHub account
+* Heroku account
+* Stripe account
+* AWS Amazon account
+* An email account preferably Gmail
 
 
-**Heroku Deployment**
+### **6-2 How to Fork it**
+
+1. Login or Sign Up to [GitHub](www.github.com).
+2. On GitHub, go to [szomoru/MP4-DietPantry](https://github.com/szomoru/MP4-DietPantry).
+3. In the top right, click "Fork".
+4. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
+5. You will also need to install all of the project requirements. This can be done using the command:
+    * `pip3 install -r requirements.txt`
+6. Type `python3 app.py` in your GitPod terminal to run your local site of this project.
+
+### **6-3 Making a Local Clone**
+
+1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/szomoru/MP4-DietPantry) for this site.
+2. Under the repository name, above the list of files, click "Code".
+3. Here you can either Clone or Download the repository.
+4. You should clone the repository using HTTPS, clicking on the icon to copy the link.
+5. Open Git Bash.
+6. Change the current working directory to the new location, where you want the cloned directory to be.
+7. Type `git clone`, and then paste the URL that was copied in Step 4.
+    * `git clone https://github.com/szomoru/MP4-DietPantry.git`
+8. Press Enter, and your local clone will be created.
+9. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
+10. You will also need to install all of the project requirements. This can be done using the command:
+    * `pip3 install -r requirements.txt`.
+11. Type `python3 app.py` in your Gitpod terminal to run your local site of this project.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/szomoru/MP4-DietPantry)
+
+
+### **6-4 Heroku Deployment**
 
 1. Log into Heroku
 2. Create a new app, choose a location closest to you
@@ -530,7 +585,7 @@ git push
 ```
 18. Your deployed site can be launched by clicking `Open App` from its page within Heroku.
 
-*AWS S3 Bucket setup**
+### **6-5 AWS S3 Bucket setup**
 1. Create an Amazon AWS account
 2. Search for S3 and create a new bucket
     - Allow public access
@@ -570,7 +625,7 @@ git push
     - Accept that everyone in the world may access the Bucket
     - Save changes
 
-**AWS IAM (Identity and Access Management) setup**
+### **6-6 AWS IAM (Identity and Access Management) setup**
 1. From the IAM dashboard within AWS, select User Groups:
     - Create a new group
     - Click through and Create Group
@@ -594,7 +649,7 @@ git push
 5. Download the `.csv` containing the access key and secret access key.
     - **THE `.csv` FILE IS ONLY AVAILABLE ONCE AND CANNOT BE DOWNLOADED AGAIN.**
 
-**Connecting Heroku to AWS S3**
+### **6-7 Connecting Heroku to AWS S3**
 1. Install boto3 and django-storages
 ```
 pip3 install boto3
@@ -606,36 +661,6 @@ pip3 freeze > requirements.txt
 4. With your S3 bucket now set up, you can create a new folder called media (at the same level as the newly added static folder) and upload any required media files to it.
     - **PLEASE MAKE SURE `media` AND `static` FILES ARE PUBLICLY ACCESSIBLE UNDER PERMISSIONS**
 
-### How to Fork it
-
-1. Login or Sign Up to [GitHub](www.github.com).
-2. On GitHub, go to [szomoru/MP4-DietPantry](https://github.com/szomoru/MP4-DietPantry).
-3. In the top right, click "Fork".
-4. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
-5. You will also need to install all of the project requirements. This can be done using the command:
-    * `pip3 install -r requirements.txt`
-6. Type `python3 app.py` in your GitPod terminal to run your local site of this project.
-
-### Making a Local Clone
-
-1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/szomoru/MP4-DietPantry) for this site.
-2. Under the repository name, above the list of files, click "Code".
-3. Here you can either Clone or Download the repository.
-4. You should clone the repository using HTTPS, clicking on the icon to copy the link.
-5. Open Git Bash.
-6. Change the current working directory to the new location, where you want the cloned directory to be.
-7. Type `git clone`, and then paste the URL that was copied in Step 4.
-    * `git clone https://github.com/szomoru/MP4-DietPantry.git`
-8. Press Enter, and your local clone will be created.
-9. You will need to create an env.py file with your own values, and create a MongoDB database with the data keys and types as shown above.
-10. You will also need to install all of the project requirements. This can be done using the command:
-    * `pip3 install -r requirements.txt`.
-11. Type `python3 app.py` in your Gitpod terminal to run your local site of this project.
-
-Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/szomoru/MP4-DietPantry)
-
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
 </div>
@@ -644,7 +669,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 <hr>
 
-### Code
+### **7-1 Code**
 
 -   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
@@ -656,7 +681,7 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 -   [Stackoverflow community](https://stackoverflow.com/): I have read a lot of forums and got a lot of hints how to continue when i was stucked.
 
-### Content
+### **7-2 Content**
 
 -   All content was written by the developer -Gergely Vig. 
 - I have used the following documents as a support and inspiration for the README.md file:
@@ -668,12 +693,12 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
    
     
 
-### Media
+### **7-3 Media**
 
 - 
     
 
-### Acknowledgements
+### **7-4 Acknowledgements**
 
 -   My Mentor for helpful feedback.
 -   Thanks to my family specially my wife who taken over our 4 kids while i was doing my studies. 
