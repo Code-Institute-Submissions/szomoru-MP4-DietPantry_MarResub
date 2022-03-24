@@ -256,10 +256,10 @@
     <a href="#breaktop">↥ Back to top!</a>
 </div>
 
-## **2. Validators** [link](https://validator.w3.org/)
-The website itself were tested on several automatd testing applications. BElow you can see a list about the perforemd tests and their results.
+## **2. Validators**
+The website itself were tested on several automatd testing applications. Below you can see a list about the perforemd tests and their results.
 
-### **2-1 HTML Validator**
+### **2-1 HTML Validator** [link](https://validator.w3.org/)
 The page has been tested by URL and also by Direct code input methods. 
 -   Some Results for pages:
     <details>
@@ -396,8 +396,71 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
 -   ### **Conclusion:**   
     The overall performance for the website on Desktop was pretty good. Normally ove 90%, which I am happy with. However on mobile the performance poorer, so it requires improvements in the future. Right now it is around 70%+, the target should be 90%+ just like on Desktop.
 
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
+
+## **3. Other Tests performed**
+
+### **3-1 Color Contrast Check**
+-   The first color scheme selection was very unlucky. IT resultesd a lot of Contrast Ratio issue all over the site. On the below pictures you can see how the contrast ratio was before. Thanks to my Assessro who highlighted this problem in my project.
+    -   <details>
+        <summary>Contrast Ratio Fail 1</summary>
+
+        ![Contrast Ratio Fail 1](docs/test/contrast_ratio_1.JPG)
+        </details>
+
+        <details>
+        <summary>Contrast Ratio Fail 2</summary>
+
+        ![Contrast Ratio Fail 2](docs/test/contrast_ratio_2.JPG)
+        </details>
+
+-   I have kept the same primary colorset (dark colors) and picked a brand new secondary color set. I tried to select a color set which results 2 green pipes. Right now the color contrast looks like this:
+    -   <details>
+        <summary>Contrast Ratio GOOD 1</summary>
+
+        ![Contrast Ratio GOOD 1](docs/test/contrast_ratio_good_1.jpg)
+        </details>
+
+        <details>
+        <summary>Contrast Ratio GOOD 2</summary>
+
+        ![Contrast Ratio GOOD 2](docs/test/contrast_ratio_good_2.jpg)
+        </details>
+
+- to check the contrast ratio i have used the Chrom DevTools
+
+### **3-2 Responsiveness**
+-   The inbuilt Chrome development tool was used through the whole development process to check the responsiveness of the website. It was handy, because it was always for me. The smallest width that i used was 320px. The first submission of the project has failed because the navigation bar has wrapped up on small screen and ruined the whole appearence. After correcting the problem there was an intensive testing of responsiveness 
+-   I have used the [Lambdatest](https://www.lambdatest.com/) website to test on different equipments
+-   [Exported PDF](docs/pdfs/mp4_diet_pantry_lambda_test.pdf)
+
+<div align="right">
+    <a href="#breaktop">↥ Back to top!</a>
+</div>
+
+## **4 Bugs during development**
+
+### **4-1 E-mail sending**
+-   One of the biggest issue during develop my final project was that the real e-mail sending did not work at all through gmail. This was a critical issue, since this failure made my site totally unusable a it was highlighted by my Assessor. Among others this was the major reason to fail with my project.
+    -   **Problem Description:**
+        During signing up to my website, the signup process went flawlessly until we get to the last step. The registration was successfull and the Success message appeared that an email with confirmation link has been sent. But that e-mail has never arrived, making the registration feature totally usless.
+    -   **Solution:**
+        After a lot of investigating thanks to **Ger** at the **Code Institute Tutor Group**, he figured out the the **DEVELOPMENT VARIABLE** has to be removed from the environment variables. Some reason it was nit enough to set the **VALUE = TRUE**, it had to be deleted totally. Even with this the Development Variable had a True Value. After removing that Variable the e-mail sending feature  worked flawlesly
+    
+### **4-2 Am I responsive**
+-   **Problem Description:**
+    [Am Irsponsive](http://ami.responsivedesign.is/) website was not able to render my deployed webpage. 
+-   **Solution:**
+    Thanks to **James** from the **Code Institute Tutor Team** we figured out that x-frame couse the problem that it cannot render. **James** could suggested me a Chrome extension, which is called, **Ignore X-Frame headers** and it solved the issue
+
 
 
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
 </div>
+
+
+
+
