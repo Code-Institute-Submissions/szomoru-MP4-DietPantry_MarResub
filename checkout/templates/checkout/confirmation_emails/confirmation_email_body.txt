@@ -19,7 +19,7 @@ Address: {{ order.street_address1 }}
 City/town: {{ order.town_or_city }}
 Country: {{ order.country }}
 
-In cas eof any delivery problem our colleague will contact ypu on the following phone number:
+In case of any delivery problem our colleague will contact you on the following phone number:
 {{ order.phone_number }}
 
 If you have any question, do not hasitate to contact us at {{ contact_email }}
