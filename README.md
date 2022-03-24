@@ -44,7 +44,7 @@ This website is a fictional webshop for people who are following different type 
 
 <hr>
 
-### **1.1 Project goals**
+### 1.1 Project goals
 -   Making a full-stack site based around business logic used to control a centrally-owned database. 
 -   The site provides an authentication mechanism and provides access to the site’s data based on the dataset. 
 -   Making a full-stack site that uses HTML, CSS, JavaScript, Python + Django.
@@ -167,9 +167,102 @@ This website is a fictional webshop for people who are following different type 
 
 <hr>
  
- ### Existing Features ###
+ ## Existing Features
 
- ### Possible Future Features ###
+### Features common on every page
+1.  <details>
+    <summary>Header</summary>
+
+    ![Header](docs/navbar.jpg)
+    
+    </details>
+    
+    -   **The name** (which also serves as logo) is clearly visible in the left side of the navbar. The name is also a redirect to the home page. 
+    -   The navbar contains the **search functionality**, where the user can search for products. The search term would match with the product name or  the product description. 
+    -   The search functionality allows users to enter keywords associated with the name or the description of the product. 
+    -   The search results are displayed on the products page. 
+    -   On the product page, a message will appear with ‘no results’ if there are no search results.
+    -   The navbar contains the **profile icon**, where people can login, register and go to their profile.
+    -   The navbar contains the **shopping bag**, where users can see the items they have put in order. The basket redirects to the order summary. 
+    -   The navbar is visible as a **hamburger menu** on mobile devices.
+    -   The header also contains three **dropdown menus**, which is four if the user is logged into its account 
+
+2.  <details>
+    <summary>Footer</summary>
+
+    ![Footer](docs/footer.jpg)
+    
+    </details>
+
+    -   **Relevant links** such as the categories of the products are placed at the footer left section, ahich is center position in case of small devices
+    -   The **social media links** are placed at the right section of the footer, which is the bottom of the footer in case of small device. 
+
+### Pages
+1.  <details>
+    <summary>Index Page</summary>
+
+    ![Index Page](docs/index.jpg)
+    
+    </details>
+    
+
+2.  <details>
+    <summary>Product Page</summary>
+
+    ![Product Page](docs/products.jpg)
+    
+    </details>
+
+3.  <details>
+    <summary>Product Detail Page</summary>
+
+    ![Product Detail Page](docs/product_details.jpg)
+    
+    </details>
+
+4.  <details>
+    <summary>Shopping Bag Page</summary>
+
+    ![Shopping Bag Page](docs/shopping_bag.jpg)
+    
+    </details>
+
+5.  <details>
+    <summary>Checkout Page</summary>
+
+    ![Checkout Page](docs/checkout.jpg)
+    
+    </details>
+
+6.  <details>
+    <summary>Checkout Success (Thank You) Page</summary>
+
+    ![Checkout Success](docs/checkout_success.jpg)
+    
+    </details>
+
+7.  <details>
+    <summary>Profile Page</summary>
+
+    ![Profile Page](docs/profile.jpg)
+    
+    </details>
+
+8.  <details>
+    <summary>Diet Page</summary>
+
+    ![Diet Page](docs/diets.jpg)
+    
+    </details>
+
+9.  <details>
+    <summary>Favourites Page</summary>
+
+    ![Favourites Page](docs/favourites.jpg)
+    
+    </details>
+    
+## Possible Future Features
 
 
 <div align="right">
