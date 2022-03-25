@@ -408,6 +408,9 @@ hr {
     min-height: 65vh;
 }
 
+.product-img-desc-container {
+    flex-direction: column;
+}
 
 .category-badge {
     color: var(--color-primary-dark);
