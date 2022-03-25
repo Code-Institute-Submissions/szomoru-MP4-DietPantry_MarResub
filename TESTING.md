@@ -448,7 +448,7 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
 -   I have used the [Lambdatest](https://www.lambdatest.com/) website to test on different equipments
 -   [Exported PDF](docs/pdfs/mp4_diet_pantry_lambda_test.pdf)
 
-### **3.3 Multi Browser Testing**
+### **3-3 Multi Browser Testing**
 -   I have used the [Browserstack website](https://www.browserstack.com/) to check the browser compatibility of my website.
 -   #### **Result:**
     The optimal browser for the website is Google Chrome browser. The website was tested on the following browsers:
