@@ -7,9 +7,12 @@ to use build a full-stack site around a business logic. I have applied everythin
 
 This website is a fictional webshop for people who are following different type of diets. Sometimes it is really hard to find the right and trustable products for the different diets, so this website supposed to collect the tested and trusted dietary products. 
 
-[Live site](http://mp4-diet-pantry.herokuapp.com) 
+[Live site](https://mp4-diet-pantry.herokuapp.com) 
 
 [Github link](https://github.com/szomoru/MP4-DietPantry) 
+
+#### *Admin login:* szomoru
+#### *Admin password:* rebellis
 
 <span id="breaktop"></span>
 
