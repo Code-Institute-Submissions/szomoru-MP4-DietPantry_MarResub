@@ -18,11 +18,15 @@
 
 [3. **Other Tests performed**](#3-other-tests-performed)
 -   [3.1 Color Contrast Check](#3-1-color-contrast-check)
+-   [3.2 Responsiveness](#3-2-responsiveness)
+-   [3.3 Multi Browser Testing](#3-3-multi-browser-testing)
 
 [4. **Bugs during development**](#4-bugs-during-development)
 -   [4.1 E-mail sending](#4-1-email-sending)
 -   [4.2 Am I responsive](#4-2-am-i-responsive)
-
+-   [4.3 No Custom Error Pages](#4-3-no-custom-error-pages)
+-   [4.4 Ruined up layout on product detail page](#4-4-ruined-up-layout-on-product-detail-page)
+-   [4.5 Stripe warning on the console](#4-5-stripe-warning-on-the-console)
 
 
 
@@ -58,7 +62,7 @@
         <summary>Confirmation E-mail</summary>
 
         ![Confirmation Email](docs/test/order_contact.jpg)
-        </details>
+            </details>
 
     -   **Result:** ***PASSED***
 
@@ -73,7 +77,7 @@
         ![Filtering Products](docs/test/filtering_products.jpg)
 
         ![Searching Products](docs/test/searching_products.jpg)
-        </details>
+            </details>
 
     -   **Result:** ***PASSED***
 
@@ -88,7 +92,7 @@
         <summary>Product Detail</summary>
 
         ![Product Detail](docs/product_details.jpg)
-        </details>
+            </details>
 
     -   **Result:** ***PASSED***
 
@@ -118,7 +122,7 @@
         ![Shopping Bag](docs/shopping_bag.jpg)
 
         ![Checkout](docs/checkout.jpg)
-        </details>
+            </details>
 
     -   **Result:** ***PASSED***
 
@@ -145,7 +149,7 @@
 
         ![Toast Success 1](docs/test/toast_success_1.jpg)     
         ![Toast Success 2](docs/test/toast_success_2.jpg)     
-    </details>
+            </details>
 
     -   **Result:** ***PASSED***
 
@@ -158,7 +162,7 @@
             <summary>Confirmation Email</summary>
 
             ![Confirmation Email](docs/test/order_contact.jpg)
-            </details>
+                </details>
 
     -   **Result:** ***PASSED***
 
@@ -196,37 +200,37 @@
     <summary>Not Registered User Navbar</summary>
 
     ![Not Registered User Navbar](docs/test/not_registered_user_navbar.jpg)
-    </details>
+        </details>
 
     <details>
     <summary>Registered User Navbar</summary>
 
     ![Registered User Navbar](docs/test/registered_user_navbar.jpg)
-    </details>
+        </details>
 
     <details>
     <summary>Not Registered User Product Detail Page</summary>
 
     ![Not Registered User Product Detail Page](docs/test/not_registered_user_product_detail.jpg)
-    </details>
+        </details>
 
     <details>
     <summary>Registered User Product Detail Page</summary>
 
     ![Registered User Product Detail Page](docs/test/registered_user_product_detail.jpg)
-    </details>
+        </details>
 
     <details>
     <summary>Not Registered User Product Detail Page - Review</summary>
 
     ![Not Registered User Product Detail Page - Review](docs/test/not_registered_user_product_detail_review.jpg)
-    </details>
+        </details>
 
     <details>
     <summary>Registered User Product Detail Page - Review</summary>
 
     ![Registered User Product Detail Page - Review](docs/test/registered_user_product_detail_review.jpg)
-    </details>
+        </details>
 
 
 ### **1-4 Administrator Goals**
@@ -238,19 +242,19 @@
         <summary>Admin Navbar</summary>
 
         ![Admin Navbar](docs/test/admin_navbar.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Admin Product Detail Page</summary>
 
         ![Admin Product Detail Page](docs/test/admin_product_detail.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Admin Product Management Page</summary>
 
         ![Admin Product Management Page](docs/test/admin_product_management.jpg)
-        </details>
+            </details>
 
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
@@ -266,17 +270,17 @@ The page has been tested by URL and also by Direct code input methods.
     <summary>Test Result</summary>
 
     ![Test Result 1](docs/test/html_validator_1.jpg)
-    </details>
+        </details>
     <details>
     <summary>Test Result</summary>
 
     ![Test Result 1](docs/test/html_validator_2.jpg)
-    </details>
+        </details>
     <details>
     <summary>Test Result</summary>
 
     ![Test Result 1](docs/test/html_validator_3.jpg)
-    </details>
+        </details>
 
     I got the same results for the rest of the pages with 2 exceptions. 
     -   There was an uncorrect usage of p tag in the product detailed page. The problem has been solved
@@ -292,7 +296,7 @@ The page has been tested by URL and also by Direct code input methods.
     <summary>CSS Validator Result</summary>
 
     ![CSS Validator](docs/test/css_validator.jpg)
-    </details>
+        </details>
 
     Unfortunately my country region was set to Hungarian, so the Validator webpage used the Hungarian language settings. I got the same result for each of 3 CSS.
     -   **Gratulálunk! Nincsenek hibák** means **Congratulations! There are no failures**
@@ -301,7 +305,15 @@ The page has been tested by URL and also by Direct code input methods.
 ### **2-3 JSHint** [link](https://jshint.com/)
 -   No errors found
 
-### **2-4 Python (flake8)** 
+### **2-4 Python Validator (PEP8)** 
+
+**PEP8** [link](http://pep8online.com)
+-   I have used the PEP8 also to validate python code.
+    It has also found the long line and whitespace erros.
+-   After correcting all the the found problems and leaving the exceptions (written under Flake8 section) the PEP8 online validator did not found any error.
+
+**Flake8** (python extension to test Python for PEP8 compliance)
+
 I have had run Flake8 to check if my code comply with the PEP8 standard.
 
 -   **Result:**
@@ -309,7 +321,7 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
     <summary>Flake8 before</summary>
 
     ![Flake8 before](docs/test/flake8_origin.jpg)
-    </details>
+        </details>
 
     -   As you can see after the first running of Flake8 it was full with problems. The majority of the problems were too long line and white space in lines. 
 
@@ -317,7 +329,7 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
     <summary>Flake8 after</summary>
 
     ![Flake8 after](docs/test/flake8_after.jpg)
-    </details>
+        </details>
 
     -   The following error handling happened to get through the above result:
         -   Any errors related to files that were not created by me (autogenerated) I left untouched (eg: migrations)
@@ -335,31 +347,31 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
         <summary>Lighthouse Desktop Result 1</summary>
 
         ![Lighthouse Desktop Result 1](docs/test/lighthouse_desktop_1.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Desktop Result 2</summary>
 
         ![Lighthouse Desktop Result 2](docs/test/lighthouse_desktop_2.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Desktop Result 3</summary>
 
         ![Lighthouse Desktop Result 3](docs/test/lighthouse_desktop_3.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Desktop Result 4</summary>
 
         ![Lighthouse Desktop Result 4](docs/test/lighthouse_desktop_4.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Desktop Result 5</summary>
 
         ![Lighthouse Desktop Result 5](docs/test/lighthouse_desktop_5.jpg)
-        </details>
+            </details>
 
 
     -   ### **Mobile:**
@@ -367,31 +379,31 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
         <summary>Lighthouse Mobile Result 1</summary>
 
         ![Lighthouse Mobile Result 1](docs/test/lighthouse_mobile_1.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Mobile Result 2</summary>
 
         ![Lighthouse Mobile Result 2](docs/test/lighthouse_mobile_2.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Mobile Result 3</summary>
 
         ![Lighthouse Mobile Result 3](docs/test/lighthouse_mobile_3.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Mobile Result 4</summary>
 
         ![Lighthouse Mobile Result 4](docs/test/lighthouse_mobile_4.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Lighthouse Mobile Result 5</summary>
 
         ![Lighthouse Mobile Result 5](docs/test/lighthouse_mobile_5.jpg)
-        </details>
+            </details>
 
 -   ### **Conclusion:**   
     The overall performance for the website on Desktop was pretty good. Normally ove 90%, which I am happy with. However on mobile the performance poorer, so it requires improvements in the future. Right now it is around 70%+, the target should be 90%+ just like on Desktop.
@@ -408,26 +420,26 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
         <summary>Contrast Ratio Fail 1</summary>
 
         ![Contrast Ratio Fail 1](docs/test/contrast_ratio_1.JPG)
-        </details>
+            </details>
 
         <details>
         <summary>Contrast Ratio Fail 2</summary>
 
         ![Contrast Ratio Fail 2](docs/test/contrast_ratio_2.JPG)
-        </details>
+            </details>
 
 -   I have kept the same primary colorset (dark colors) and picked a brand new secondary color set. I tried to select a color set which results 2 green pipes. Right now the color contrast looks like this:
     -   <details>
         <summary>Contrast Ratio GOOD 1</summary>
 
         ![Contrast Ratio GOOD 1](docs/test/contrast_ratio_good_1.jpg)
-        </details>
+            </details>
 
         <details>
         <summary>Contrast Ratio GOOD 2</summary>
 
         ![Contrast Ratio GOOD 2](docs/test/contrast_ratio_good_2.jpg)
-        </details>
+            </details>
 
 - to check the contrast ratio i have used the Chrom DevTools
 
@@ -435,6 +447,37 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
 -   The inbuilt Chrome development tool was used through the whole development process to check the responsiveness of the website. It was handy, because it was always for me. The smallest width that i used was 320px. The first submission of the project has failed because the navigation bar has wrapped up on small screen and ruined the whole appearence. After correcting the problem there was an intensive testing of responsiveness 
 -   I have used the [Lambdatest](https://www.lambdatest.com/) website to test on different equipments
 -   [Exported PDF](docs/pdfs/mp4_diet_pantry_lambda_test.pdf)
+
+### **3.3 Multi Browser Testing**
+-   I have used the [Browserstack website](https://www.browserstack.com/) to check the browser compatibility of my website.
+-   #### **Result:**
+    The optimal browser for the website is Google Chrome browser. The website was tested on the following browsers:
+    -   Microsoft Edge 99 - Windows 10: **PASS**
+    -   Internet Explorer 11 - Windows 10: **FAILED**
+    -   Opera 84 - Windows 10: **PASS**
+    -   Yandex 14.12 - Windows 10:  **FAILED**
+    -   Mozzilla 99 Beta - Windows 10: **PASS**
+    -   Safari - IOS15: **PASS**
+    -   Chrome 99 - Windoes 10: **PASS**
+
+    ### Screenshot examples: ###
+    -   <details>
+        <summary>Iphone SE - Safari</summary>
+
+        ![Lighthouse Desktop Result 1](docs/test/lighthouse_desktop_1.jpg)
+            </details>
+
+        <details>
+        <summary>Ms Edge - Windoews 10</summary>
+
+        ![Lighthouse Desktop Result 2](docs/test/lighthouse_desktop_2.jpg)
+            </details>
+
+        <details>
+        <summary>Opera - Windoes 10</summary>
+
+        ![Lighthouse Desktop Result 3](docs/test/lighthouse_desktop_3.jpg)
+            </details>
 
 <div align="right">
     <a href="#breaktop">↥ Back to top!</a>
@@ -455,6 +498,35 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
 -   **Solution:**
     Thanks to **James** from the **Code Institute Tutor Team** we figured out that x-frame couse the problem that it cannot render. **James** could suggested me a Chrome extension, which is called, **Ignore X-Frame headers** and it solved the issue
 
+### **4-3 No Custom Error Pages**
+-   **Problem Description:**
+    There were no custom Error Pages created. Thanks to my Assessor to highlight it to me.
+-   **Solution:**
+    Custom Error Pages has been created in the format of the website. The covered Errors are: Error 404 and Error 500
+
+### **4-4 Ruined up layout on product detail page**
+-   **Problem Description:**
+    On the product detail page the product iamge and the product description bellow that could change the direction to row. This ruined up the layout of the page. This problem was discovered during testing procedure. The cause of the problem was that there were no flex direction defined and if the description text was short enough the direction was row. 
+    <details>
+    <summary>Product Detail page Error</summary>
+
+    ![Contrast Ratio Fail 1](docs/test/new_product_error.JPG)
+        </details>
+
+-   **Solution:**
+    There was a new **class** defined to style the related **div** and at the base css the **flex-direction** has been defined as **column**. This problem has never showed up again during testing. 
+
+### **4-5 Stripe warning on the console**
+-   **Problem Description:**
+    During testing period I have not experienced any critical error displayed on the console. There was a warning generated related to Stripe. The reason was that there was only HTTP connection, not secured one 
+    <details>
+    <summary>Stripe Warning on Console</summary>
+
+    ![Contrast Ratio Fail 1](docs/test/stripe_warning.JPG)
+        </details>
+
+-   **Solution:**
+    Ass i changed http to https at the address the warning disappeared
 
 
 <div align="right">
