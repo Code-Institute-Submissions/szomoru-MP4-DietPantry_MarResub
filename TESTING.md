@@ -464,19 +464,19 @@ I have had run Flake8 to check if my code comply with the PEP8 standard.
     -   <details>
         <summary>Iphone SE - Safari</summary>
 
-        ![Lighthouse Desktop Result 1](docs/test/lighthouse_desktop_1.jpg)
+        ![Iphone SE - Safari](docs/test/iphone_se_safari.JPG)
             </details>
 
         <details>
         <summary>Ms Edge - Windoews 10</summary>
 
-        ![Lighthouse Desktop Result 2](docs/test/lighthouse_desktop_2.jpg)
+        ![Ms Edge - Windoews 10](docs/test/edge_windows_10.JPG)
             </details>
 
         <details>
         <summary>Opera - Windoes 10</summary>
 
-        ![Lighthouse Desktop Result 3](docs/test/lighthouse_desktop_3.jpg)
+        ![Opera - Windoes 10](docs/test/opera_latest_windows-10.JPG)
             </details>
 
 <div align="right">
